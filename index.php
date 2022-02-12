@@ -12,6 +12,6 @@
         <input id="password" type="text">
         <button id="btn-submit">Acessar</button>
     
-<script src="../controller/controller_login.js"></script>
+<script src="controller/controller_login.js"></script>
 </body>
 </html>
