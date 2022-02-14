@@ -1,8 +1,11 @@
 var logar = function(){
     request = new XMLHttpRequest();
     request.onreadystatechange = function(){
-        if(this.readState == 4 && this.status == 200){
-            console.log(this);
+        if(this.status == 200 && this.readyState == 4){
+            var json = JSON.parse(this.responseText);
+            if(json.ERRO == false){
+                window.location = json.REDIRECT;
+            }
         }
     }
 
@@ -10,7 +13,7 @@ var logar = function(){
         user: document.getElementById("user").value,
         password: document.getElementById("password").value
     }
-    request.open("POST","model/login.php",true);
+    request.open("POST","model/login.php",false);
     request.send(JSON.stringify(data));
 }
 
