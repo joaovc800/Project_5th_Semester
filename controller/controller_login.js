@@ -10,7 +10,7 @@ var logar = function(){
         user: document.getElementById("user").value,
         password: document.getElementById("password").value
     }
-    request.open("POST","../model/login.php",true);
+    request.open("POST","model/login.php",true);
     request.send(JSON.stringify(data));
 }
 
