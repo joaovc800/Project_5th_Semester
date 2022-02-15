@@ -68,7 +68,7 @@
                                                 <div style="background-image: url(assets/image/login-bg-2.svg);" class="d-flex flex-column align-items-center justify-content-start">
                                                     <h1 class="mt-5"><i class="fa fa-leaf text-success-m2 text-125"></i></h1>
                                                     <h2 class="text-blue-l1">
-                                                        Inventory <span class="text-80 text-white-tp3">Control</span>
+                                                        Inventory <span class="text-80 text-dark-tp3">Control</span>
                                                     </h2>
                                                 </div>
                                             </div>
@@ -77,7 +77,7 @@
                                                     <div class="bgc-black-tp4 radius-1 p-3 w-90 text-center my-3 h-100">
                                                         <h1><i class="fa fa-leaf text-success-m2 text-125"></i></h1>
                                                         <h2 class="text-blue-l1">
-                                                            inventory <span class="text-80 text-white-tp3">Application</span>
+                                                            inventory <span class="text-80 text-white-tp3">Control</span>
                                                         </h2>
                                                     </div>
                                                 </div>
