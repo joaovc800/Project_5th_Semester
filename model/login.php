@@ -22,17 +22,13 @@ try {
             $aRetorno['DADOS'] = $ret;
             $aRetorno['MSG'] = "success";
             $aRetorno['ERRO'] = false;
+            $_SESSION['DADOS_USER'] = $ret;
         }
-        $_SESSION['USER'] = $aRetorno['DADOS']['MATRICULA'];
-        $_SESSION['USER'] = $aRetorno['DADOS']['STATUS'];
-        $_SESSION['USER'] = $aRetorno['DADOS']['USER'];
-
         $aRetorno['REDIRECT'] = "view/painel.php";
     }else{
-        $aRetorno['MSG'] = "Login inválido, por favor verifique seus dados";
+        $aRetorno['MSG'] = "Login inválido, por favor verifique seus dados.";
         $aRetorno['ERRO'] = true;
     }
-
     
 } catch (\Throwable $th) {
     $aRetorno['MSG'] = "Error!";

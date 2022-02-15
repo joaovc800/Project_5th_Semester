@@ -3,8 +3,14 @@ var logar = function(){
     request.onreadystatechange = function(){
         if(this.status == 200 && this.readyState == 4){
             var json = JSON.parse(this.responseText);
+            var divError = document.getElementById("msg-error");
             if(json.ERRO == false){
+                divError.innerHTML = "";
                 window.location = json.REDIRECT;
+            }else{
+                divError.innerHTML = `<div class="alert alert-danger">
+                                            ${json.MSG}
+                                      </div>`;
             }
         }
     }

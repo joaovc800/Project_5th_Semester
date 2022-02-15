@@ -13,6 +13,11 @@
     <link rel="stylesheet" href="includes/css/ace-font.css">
     <link rel="stylesheet" href="includes/@page-style.css">
     <title>Login</title>
+    <style>
+        .body-container{
+            background-image: linear-gradient(#86bd68 ,#57b5da);
+        }
+    </style>
 </head>
 <body>
     <div class="body-container">
@@ -25,15 +30,15 @@
                                 <div class="d-none d-lg-flex col-lg-5 border-r-1 brc-default-l2 px-0">
                                     <div id="loginBgCarousel" class="carousel slide minw-100 h-100">
                                         <ol class="carousel-indicators d-none">
-                                            <li data-target="#loginBgCarousel" data-slide-to="0" class="active"></li>
-                                            <li data-target="#loginBgCarousel" data-slide-to="1"></li>
-                                            <li data-target="#loginBgCarousel" data-slide-to="2"></li>
-                                            <li data-target="#loginBgCarousel" data-slide-to="3"></li>
+                                            <li data-target="#loginBgCarousel" data-slide-to="0" class="active bgc-success"></li>
+                                            <li data-target="#loginBgCarousel" data-slide-to="1" class="bgc-success"></li>
+                                            <li data-target="#loginBgCarousel" data-slide-to="2" class="bgc-success"></li>
+                                            <li data-target="#loginBgCarousel" data-slide-to="3" class="bgc-success"></li>
                                         </ol>
                                         <div class="carousel-inner minw-100 h-100">
                                             <div class="carousel-item active minw-100 h-100">
                                                 <div style="background-image: url(assets/image/login-bg-1.svg);" class="bgc-primary-l4 d-flex flex-column align-items-center justify-content-center">
-                                                    <h1 class="mt-5"><a href="html/dashboard.html"><i class="fa fa-leaf text-success-m2 text-125"></i></a></h1>
+                                                    <h1 class="mt-5"><a href="#"><i class="fa fa-leaf text-success-m2 text-125"></i></a></h1>
                                                     <h2 class="text-blue-d1">
                                                         Inventory <span class="text-80 text-dark-tp4">Control</span>
                                                     </h2>
@@ -115,7 +120,7 @@
                                                 </h4>
                                             </div>
                                         <div class="d-lg-none text-secondary-m1 my-4 text-center">
-                                            <a href="html/dashboard.html"><i class="fa fa-leaf text-success-m2 text-200 mb-4"></i></a>
+                                            <a href="#"><i class="fa fa-leaf text-success-m2 text-200 mb-4"></i></a>
                                             <h1 class="text-170">
                                                 <span class="text-blue-d1">Inventory<span class="text-80 text-dark-tp3">Control</span></span>
                                             </h1>
@@ -171,6 +176,7 @@
                                                             <i class="fab fa-google text-110"></i>
                                                         </button>
                                                     </div>
+                                                    <div id="msg-error" class="mt-3"></div>
                                                 </div>
                                             </div>
                                         </div>
