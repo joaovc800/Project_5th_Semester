@@ -37,8 +37,10 @@
                                                     <h2 class="text-blue-d1">
                                                         Inventory <span class="text-80 text-dark-tp4">Control</span>
                                                     </h2>
-                                                    <div class="mt-5 mx-4 text-120 text-dark-tp4 text-justify">
-                                                        Join our community to make friends,<br> meet experts &amp; receive exclusive offers!
+                                                    <div class="mt-5 mx-4 text-120 text-dark-tp4 text-justify"> 
+                                                        Inventory management system, friendly, easy and with the best usability on the market.
+                                                        <br>
+                                                        by wit solutions..
                                                         <hr class="mb-1">
                                                         <div>
                                                             <a id="id-start-carousel" href="#" class="text-sm text-grey d-inline-block mt-3">
@@ -58,7 +60,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="mt-auto mb-4 text-dark-tp3">
-                                                        Ace Company © 2019
+                                                        Wit Solutions © 2022
                                                     </div>
                                                 </div>
                                             </div>
@@ -365,7 +367,7 @@
                     </div>
                 </div>
                 <div class="d-lg-none my-3 text-white-tp1 text-center">
-                    <i class="fa fa-leaf text-success-l3 mr-1 text-110"></i> Ace Company © 2019
+                    <i class="fa fa-leaf text-success-l3 mr-1 text-110"></i> Wit Solutions © 2022
                 </div>
             </div>
         </div>
