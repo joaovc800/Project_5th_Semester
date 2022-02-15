@@ -115,7 +115,7 @@
                                             </a>
                                         </li>
                                     </ul>
-                                    <div class="tab-content tab-sliding border-0 p-0" data-swipe="right">
+                                    <div class="tab-content tab-sliding border-0 p-0 mt-5" data-swipe="right">
                                         <div class="tab-pane active show mh-100 px-3 px-lg-0 pb-3" id="id-tab-login">
                                             <div class="d-none d-lg-block col-md-6 offset-md-3 mt-lg-4 px-0">
                                                 <h4 class="text-dark-tp4 border-b-1 brc-grey-l1 pb-1 text-130">
@@ -148,25 +148,9 @@
                                                     Forgot Password?
                                                 </a>
                                             </div>
-                                            <div class="form-group col-md-6 offset-md-3">
-                                                <label class="d-inline-block mt-3 mb-0 text-secondary-d2">
-                                                    <input type="checkbox" class="mr-1" id="id-remember-me">
-                                                    Remember me
-                                                </label>
-                                                <button id="btn-submit"type="button" class="btn btn-info btn-block btn-md btn-bold mt-2 mb-4">
-                                                    Sign In
-                                                </button>
-                                            </div>
                                         </div>
                                         <div class="form-row">
                                             <div class="col-12 col-md-6 offset-md-3 d-flex flex-column align-items-center justify-content-center">
-                                                <hr class="brc-default-m4 mt-0 mb-2 w-100">
-                                                <div class="p-0 px-md-2 text-dark-tp3 my-3">
-                                                    Not a member?
-                                                    <a class="text-success-m2 text-600 mx-1" data-toggle="tab" data-target="#id-tab-signup" href="#">
-                                                        Signup now
-                                                    </a>
-                                                </div>
                                                 <hr class="brc-default-m4 w-100 mb-2">
                                                 <div class="mt-n4 bgc-white-tp2 px-3 py-1 text-default-d1 text-90">Or Get Started Using</div>
                                                     <div class="my-2">
@@ -277,17 +261,9 @@
                                                                </span>
                                                                </label>
                                                            </div>
-
                                                        </div>
-
                                                    </div>
-
                                                    <div class="form-group col-md-6 offset-md-3 mt-2">
-                                                       <label class="d-inline-block mt-3 mb-0 text-secondary-d2">
-                                                           <input type="checkbox" class="mr-1" id="id-agree">
-                                                           <span class="text-secondary-d2">I have read and agree to <a href="#" class="text-blue">terms</a></span>
-                                                       </label>
-
                                                        <button type="button" class="btn btn-success btn-block btn-md btn-bold mt-2 mb-3">
                                                            Sign Up
                                                        </button>
