@@ -333,26 +333,26 @@
                                                 </h4>
                                             </div>
 
-                                            <form class="form-row mt-4">
+                                            <div class="form-row mt-4">
                                                 <div class="form-group col-md-6 offset-md-3">
                                                     <label class="text-secondary-m1 mb-3">
                                                         Enter your email address and we'll send you the instructions:
                                                     </label>
                                                     <div class="d-flex align-items-center">
-                                                        <input type="email" class="form-control form-control-lg pr-4 shadow-none" id="id-recover-email" placeholder="Email"                             autocomplete="off">
-                                                        <i class="fa fa-envelope text-grey-m2 ml-n4"></i>
+                                                        <input type="email" class="form-control form-control-lg pr-4 shadow-none" id="id-recover-email" placeholder="Username" autocomplete="off">
+                                                        <i class="fa fa-user text-grey-m2 ml-n4"></i>
+                                                    </div>
+                                                    <div class="d-flex align-items-center mt-2">
+                                                        <input type="text" class="form-control form-control-lg pr-4 shadow-none" id="id-recover-email" placeholder="Day admission" autocomplete="off">
+                                                        <i class="fa fa-calendar text-grey-m2 ml-n4"></i>
                                                     </div>
                                                 </div>
-
-
                                                 <div class="form-group col-md-6 offset-md-3 mt-1">
                                                     <button type="button" class="btn btn-warning btn-block btn-md btn-bold mt-2 mb-4">
                                                         Continue
                                                     </button>
                                                 </div>
-                                            </form>
-
-
+                                            </div>
                                             <div class="form-row w-100"><div class="col-12 col-md-6 offset-md-3 d-flex flex-column align-items-center justify-content-center">
 
                                                 <hr class="brc-default-m4 mt-0 mb-2 w-100">
