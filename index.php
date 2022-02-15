@@ -343,19 +343,20 @@
                                                         Enter your email address and we'll send you the instructions:
                                                     </label>
                                                     <div class="d-flex align-items-center">
-                                                        <input type="email" class="form-control form-control-lg pr-4 shadow-none" id="id-recover-email" placeholder="Username" autocomplete="off">
+                                                        <input type="text" class="form-control form-control-lg pr-4 shadow-none" id="id-recover-email" placeholder="Username" autocomplete="off">
                                                         <i class="fa fa-user text-grey-m2 ml-n4"></i>
                                                     </div>
                                                     <div class="d-flex align-items-center mt-2">
-                                                        <input type="text" class="form-control form-control-lg pr-4 shadow-none" id="id-recover-email" placeholder="Day admission" autocomplete="off">
-                                                        <i class="fa fa-calendar text-grey-m2 ml-n4"></i>
+                                                        <input type="text" class="form-control form-control-lg pr-4 shadow-none" id="id-recover-registration" placeholder="registration" autocomplete="off">
+                                                        <i class="fa fa-user text-grey-m2 ml-n4"></i>
                                                     </div>
                                                 </div>
                                                 <div class="form-group col-md-6 offset-md-3 mt-1">
-                                                    <button type="button" class="btn btn-warning btn-block btn-md btn-bold mt-2 mb-4">
+                                                    <button id="btn-reset-pass" class="btn btn-warning btn-block btn-md btn-bold mt-2 mb-4">
                                                         Continue
                                                     </button>
                                                 </div>
+                                                <div class="col-12"id="msg-reset"></div>
                                             </div>
                                             <div class="form-row w-100"><div class="col-12 col-md-6 offset-md-3 d-flex flex-column align-items-center justify-content-center">
 
@@ -366,8 +367,6 @@
                                                         Back to Login
                                                     </a>
                                                 </div>
-
-
                                             </div>
                                         </div>               
                                     </div>
@@ -383,10 +382,8 @@
         </div>
     </div>
 </div>
-        <!-- <input class="form-control" id="user" type="text">
-        <input class="form-control"id="password" type="text">
-        <button class="btn btn-primary"id="btn-submit">Acessar</button> -->
 <script src="controller/controller_login.js"></script>
+<script src="controller/controller_reset.js"></script>
 <script src="includes/jquery.js"></script>
 <script src="includes/popper.js"></script>
 <script src="includes/bootstrap.js"></script>
