@@ -9,7 +9,7 @@ var logar = function(){
                 window.location = json.REDIRECT;
             }else{
                 divError.innerHTML = `<div class="alert alert-danger">
-                                            ${json.MSG}
+                                            <b>${json.MSG}</b>
                                       </div>`;
             }
         }

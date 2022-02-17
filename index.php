@@ -47,9 +47,9 @@
                                                         Inventory <span class="text-80 text-dark-tp4">Control</span>
                                                     </h2>
                                                     <div class="mt-5 mx-4 text-120 text-dark-tp4 text-justify"> 
-                                                        Inventory management system, friendly, easy and with the best usability on the market.
+                                                        <p>Inventory management system, friendly, easy and with the best usability on the market.</p>
                                                         <br>
-                                                        by wit solutions..
+                                                        <p>by wit solutions...</p>
                                                         <hr class="mb-1">
                                                         <div>
                                                             <a id="id-start-carousel" href="#" class="text-sm text-grey d-inline-block mt-3">
@@ -148,6 +148,11 @@
                                                     Forgot Password?
                                                 </a>
                                             </div>
+                                            <div class="form-group col-md-6 offset-md-3 mt-2 mt-md-1">
+                                                <div class="d-flex align-items-center input-floating-label text-blue-m1 brc-blue-m2">
+                                                    <button id="btn-submit" class="btn btn-success w-100">Access</button>
+                                                </div>
+                                            </div>  
                                         </div>
                                         <div class="form-row">
                                             <div class="col-12 col-md-6 offset-md-3 d-flex flex-column align-items-center justify-content-center">
@@ -164,8 +169,8 @@
                                                             <i class="fab fa-google text-110"></i>
                                                         </button>
                                                     </div>
-                                                    <div id="msg-error" class="mt-3"></div>
                                                 </div>
+                                                <div id="msg-error" class="mt-5 container text-center"></div>
                                             </div>
                                         </div>
                                             <div class="tab-pane mh-100 px-3 px-lg-0 pb-3" id="id-tab-signup" data-swipe-prev="#id-tab-login">
@@ -332,7 +337,7 @@
                                                         Continue
                                                     </button>
                                                 </div>
-                                                <div class="col-12"id="msg-reset"></div>
+                                                <div class="col-8 container"id="msg-reset"></div>
                                             </div>
                                             <div class="form-row w-100"><div class="col-12 col-md-6 offset-md-3 d-flex flex-column align-items-center justify-content-center">
 

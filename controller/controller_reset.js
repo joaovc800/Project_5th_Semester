@@ -3,11 +3,15 @@ function resetPass(){
     request.onreadystatechange = function(){
         if(this.status == 200 && this.readyState == 4){
             var json = JSON.parse(this.responseText);
+            var divReset = document.getElementById("msg-reset");
             if(json.ERRO != 1){
-                var divReset = document.getElementById("msg-reset");
-                divReset.innerHTML = `<div class="alert alert-success">
+                divReset.innerHTML = `<div class="alert">
                                         <p class="text-center">${json.MSG}</p>
                                         <p class="text-center"> Senha temporária: <b>${json.PASS}</b></p>
+                                    </div>`;
+            }else{
+                divReset.innerHTML = `<div class="alert alert-danger">
+                                        <p class="text-center">${json.MSG}</p>
                                     </div>`;
             }
         }

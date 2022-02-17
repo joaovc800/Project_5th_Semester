@@ -10,6 +10,12 @@ include('../model/session.php')
     <title>Painel</title>
 </head>
 <body>
-    <a href="../model/logout.php">Logout</a>
+    <div class="body-container">
+        <div class="navbar navbar-expand-lg navbar-fixed navbar-default">
+            <div class="navbar-inner">
+                
+            </div>
+        </div>
+    </div>
 </body>
 </html>
