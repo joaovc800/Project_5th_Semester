@@ -6,10 +6,10 @@ try {
     $aRetorno = array();
     $json = json_decode(file_get_contents('php://input'));
 
-    $cQry = "SELECT ID,
+    $cQry = "SELECT ID_USUARIO,
                     MATRICULA,
                     STATUS,
-                    USER 
+                    USERNAME 
                     FROM acessos 
                     WHERE PASSWORD = MD5('{$json->password}')
                     AND USER = '{$json->user}'";
