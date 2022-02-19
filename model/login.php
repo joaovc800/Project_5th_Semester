@@ -12,7 +12,7 @@ try {
                     USERNAME 
                     FROM acessos 
                     WHERE PASSWORD = MD5('{$json->password}')
-                    AND USER = '{$json->user}'";
+                    AND USERNAME = '{$json->user}'";
 
     $fetchQuery = mysqli_query($conect,$cQry);
     $count = mysqli_num_rows($fetchQuery);
