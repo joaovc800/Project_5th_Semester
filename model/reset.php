@@ -13,9 +13,9 @@ try {
         $cQry = "SELECT ID,
                     MATRICULA,
                     STATUS,
-                    USER 
+                    USERNAME 
                     FROM acessos 
-                    WHERE USER = '{$json->email}'
+                    WHERE USERNAME = '{$json->email}'
                     AND MATRICULA = '{$json->matricula}'";
 
         $fetchQuery = mysqli_query($conect,$cQry);
@@ -31,7 +31,7 @@ try {
             }
             
         }else{
-            $aRetorno['MSG'] = "Usu·rio n„o encontrado";
+            $aRetorno['MSG'] = "Usu√°rio n√£o encontrado";
             $aRetorno['ERRO'] = true;
         }
     }
