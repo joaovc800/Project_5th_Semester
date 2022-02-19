@@ -10,7 +10,7 @@ try {
         $aRetorno['MSG'] = "Todos os campos devem ser preenchidos";
         $aRetorno['ERRO'] = true;
     }else{
-        $cQry = "SELECT ID,
+        $cQry = "SELECT ID_USUARIO,
                     MATRICULA,
                     STATUS,
                     USERNAME 
