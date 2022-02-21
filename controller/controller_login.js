@@ -18,7 +18,7 @@ var logar = function(){
     var data = {
         user: document.getElementById("user").value,
         password: document.getElementById("password").value
-    }
+    };
     request.open("POST","model/login.php",false);
     request.send(JSON.stringify(data));
 }
