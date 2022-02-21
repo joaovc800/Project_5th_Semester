@@ -1,3 +1,6 @@
+<?php
+include('../model/session.php')
+?>
 <!doctype html>
 <html lang="en">
 
