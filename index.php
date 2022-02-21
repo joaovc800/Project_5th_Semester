@@ -373,37 +373,3 @@
 <script src="includes/bootstrap/dist/js/bootstrap.js"></script>
 </body>
 </html>
-
-
-<!-- <h1 class="text-center text-muted">Registrar</h1>
-        <form action="php/register.php" method="POST">
-          <div class="col-md-12">
-            <input name="nome_req" type="text" class="form-control" placeholder="Nome completo">
-          </div>
-          <div class="col-md-12">
-            <input name="matricula" type="number" class="form-control mt-2" placeholder="Matrícula ou RA">
-          </div>
-          <div class="col-md-12">
-            <input name="email" type="email" class="form-control mt-2" placeholder="E-mail">
-          </div>
-          <div class="col-md-12">
-            <input name="telefone" type="text" class="form-control mt-2" placeholder="Telefone (DDD + Número)" onkeypress="mask(this, mphone);">
-          </div>
-          <div class="col-md-12">
-            <input name="assunto" type="text" class="form-control mt-2" placeholder="Assunto">
-          </div>
-          <div class="col-md-12">
-            <select name="status" class="form-select mt-2" aria-label="Default select example">
-              <option selected disabled>Status</option>
-              <option name="status" value="Pendente">Pendente</option>
-              <option name="status" value="Concluído">Concluído</option>
-            </select>
-          </div>
-          <div class="col-md-12">
-            <div class="form-floating">
-              <textarea name="resolucao" class="form-control mt-5" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px" maxlength="400"></textarea>
-              <label for="floatingTextarea2">Resolução</label>
-            </div>
-            <button type="submit" class="w-100 mt-2 btn btn-primary btn-lg">Enviar <span class="fas fa-paper-plane"></button>
-          </div>
-        </form> -->

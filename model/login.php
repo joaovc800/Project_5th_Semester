@@ -24,7 +24,7 @@ try {
             $aRetorno['ERRO'] = false;
             $_SESSION['DADOS_USER'] = $ret;
         }
-        $aRetorno['REDIRECT'] = "view/painel.php";
+        $aRetorno['REDIRECT'] = "view/home.php";
     }else{
         $aRetorno['MSG'] = "Login inválido, por favor verifique seus dados.";
         $aRetorno['ERRO'] = true;
