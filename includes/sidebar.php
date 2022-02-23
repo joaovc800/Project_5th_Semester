@@ -557,17 +557,15 @@
             </ul>
         </div>
         <!-- /.sidebar scroll -->
-        <div class="sidebar-section">
+        <!-- <div class="sidebar-section">
             <div class="sidebar-section-item fadeable-bottom">
                 <div class="fadeinable">
-                    <!-- shows this when collapsed -->
                     <div class="pos-rel">
                         <img alt="Alexa's Photo" src="assets/image/avatar/avatar3.jpg" width="42" class="px-1px radius-round mx-2 border-2 brc-default-m2">
                         <span class="bgc-success radius-round border-2 brc-white p-1 position-tr mr-1 mt-2px"></span>
                     </div>
                 </div>
                 <div class="fadeable hideable w-100 bg-transparent shadow-none border-0">
-                    <!-- shows this when full-width -->
                     <div id="sidebar-footer-bg" class="d-flex align-items-center bgc-white shadow-sm mx-2 mt-2px py-2 radius-t-1 border-x-1 border-t-2 brc-primary-m3">
                         <div class="d-flex mr-auto py-1">
                             <div class="pos-rel">
@@ -590,6 +588,6 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
 </div>

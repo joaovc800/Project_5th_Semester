@@ -18,22 +18,19 @@ include('../model/session.php')
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/regular.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/brands.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/solid.min.css">
-
-
-
-    <!-- include vendor stylesheets used in "Landing Page 1" page. see "/views//pages/partials/landing-page-1/@vendor-stylesheets.hbs" -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600&amp;display=swap">
+       
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.css">
 
 
-    <!-- include fonts -->
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600&display=swap">
-
-
-
-    <!-- ace.css -->
-    <link rel="stylesheet" type="text/css" href="../includes/css/ace.min.css">
-
-
+    <!-- <link rel="stylesheet" type="text/css" href="../includes/css/ace.min.css"> -->
+    <link rel="stylesheet" type="text/css" href="../includes/css/ace-themes.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="../includes/css/ace.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="../includes/css/ace-themes.css"></link> -->
+    <link rel="stylesheet" href="../includes/css/ace.css">
+    <link rel="stylesheet" href="../includes/css/ace-font.css">
+    <link rel="stylesheet" href="../includes/@page-style.css">
     <!-- favicon -->
     <link rel="icon" type="image/png" href="./../includes/favicon.png" />
 
@@ -129,336 +126,17 @@ include('../model/session.php')
         border-right-color: transparent !important;
       }
     </style>
-    <link rel="stylesheet" type="text/css" href="../includes/css/ace-themes.min.css">
-
+    
   </head>
 
   <body>
+    <!-- SIDEBAR -->
+    <?php include '../includes/sidebar.php';?>
+    <!-- SIDEBAR -->
     <div class="body-container">
+      <?php include '../includes/navbar.php';?>
       <div class="pos-abs" id="scroll-down"></div>
       <div class="pos-abs" id="scroll-up"></div>
-
-      <nav class="navbar navbar-expand-lg navbar-darkblue" id="navbar-dark">
-        <div class="navbar-inner">
-          <div class="container">
-
-
-            <button type="button" class="navbar-toggler btn btn-burger burger-times static collapsed d-flex d-lg-none ml-2" data-toggle="collapse" data-target="#navbarMenu1-dark" aria-controls="navbarMenu1-dark" aria-expanded="false" aria-label="Toggle navbar menu">
-              <span class="bars text-white"></span>
-            </button><!-- mobile navbar toggler button -->
-
-
-            <div class="navbar-intro justify-content-xl-between bgc-transparent">
-              <a class="navbar-brand text-white text-180" href="#">
-                <i class="fa fa-leaf text-105 text-green-l5 mr-1"></i>
-                <span>WIT</span>
-                <span class="text-70">Solutions</span>
-              </a><!-- /.navbar-brand -->
-            </div><!-- /.navbar-intro -->
-
-
-            <div class="navbar-menu collapse navbar-collapse navbar-backdrop " id="navbarMenu1-dark">
-
-              <div class="navbar-nav">
-                <ul class="nav nav-compact-3">
-
-                  <li class="nav-item pos-rel dropdown dropdown-mega dropdown-hover">
-                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                      <i class="fa fa-list-alt mr-2 d-lg-none"></i>
-                      Sistemas
-                      <i class="caret fa fa-angle-down d-none d-lg-block"></i>
-                      <i class="caret fa fa-angle-left d-block d-lg-none"></i>
-                    </a>
-                    <div class="p-0 dropdown-menu dropdown-center dropdown-lg border-0 shadow radius-2 mt-1 mt-lg-3">
-                      <div class="row mx-0">
-                        <div class="bgc-white col-lg-6 col-12 p-2 p-lg-3 p-xl-4">
-                          <div class="d-flex align-items-center">
-                            <div class="pos-rel">
-                              <i class="bgc-blue-l3 w-4 h-4 radius-round position-r mr-2 mt-25"></i>
-                              <i class="fa fa-edit text-160 text-blue mr-2 mb-3 w-6 h-6 radius-round text-center pt-1 pos-rel"></i>
-                            </div>
-                            <div>
-                              <a href="#" class="d-block py-1px px-1 radius-1 no-underline text-dark-tp3 text-600 bgc-h-primary-l2 text-95">
-                                Nova postagem
-                              </a>
-                              <p class="text-dark-tp4 pl-1">
-                                Crie anotações sobre algo.
-                              </p>
-                            </div>
-                          </div>
-
-                          <div class="d-flex align-items-center">
-                            <div class="pos-rel">
-                              <i class="bgc-green-l3 w-4 h-4 radius-round position-r mr-2 mt-25"></i>
-                              <i class="far fa-comments text-160 text-green mr-2 mb-3 w-6 h-6 radius-round text-center pt-1 pos-rel"></i>
-                            </div>
-                            <div>
-                              <a href="#" class="d-block py-1px px-1 radius-1 no-underline text-dark-tp3 text-600 bgc-h-primary-l2 text-95">
-                                Forum
-                              </a>
-                              <p class="text-dark-tp4 pl-1">
-                                Converse conosco e tire duvidas com outros usuários
-                              </p>
-                            </div>
-                          </div>
-
-                          <div class="d-flex align-items-center">
-                            <div class="pos-rel">
-                              <i class="bgc-orange-l3 w-4 h-4 radius-round position-r mr-2 mt-25"></i>
-                              <i class="far fa-star text-160 text-orange-d2 mr-2 mb-3 w-6 h-6 radius-round text-center pt-1 pos-rel"></i>
-                            </div>
-
-                            <div>
-                              <a href="#" class="d-block py-1px px-1 radius-1 no-underline text-dark-tp3 text-600 bgc-h-primary-l2 text-95">
-                                Favoritos
-                              </a>
-                              <p class="text-dark-tp4 pl-1">
-                                Seus programas mais utilizados de nossos sistemas.
-                              </p>
-                            </div>
-                          </div>
-                        </div><!-- .col:mega links -->
-
-                        <div class="bgc-white col-lg-6 col-12 p-2 p-lg-3 p-xl-4">
-                          <div class="d-flex align-items-center">
-                            <div class="pos-rel">
-                              <i class="bgc-blue-l3 w-4 h-4 radius-round position-r mr-2 mt-25"></i>
-                              <i class="fa fa-globe text-160 text-blue mr-2 mb-3 w-6 h-6 radius-round text-center pt-1 pos-rel"></i>
-                            </div>
-                            <div>
-                              <a href="#" class="d-block py-1px px-1 radius-1 no-underline text-dark-tp3 text-600 bgc-h-primary-l2 text-95">
-                                Links
-                              </a>
-                              <p class="text-dark-tp4 pl-1">
-                                Encontre variadas formas de agregar valor aos sistemas.
-                              </p>
-                            </div>
-                          </div>
-
-                          <div class="d-flex align-items-center">
-                            <div class="pos-rel">
-                              <i class="bgc-purple-l3 w-4 h-4 radius-round position-r mr-2 mt-25"></i>
-                              <i class="far fa-copy text-160 text-purple mr-2 mb-3 w-6 h-6 radius-round text-center pt-1 pos-rel"></i>
-                            </div>
-                            <div>
-                              <a href="#" class="d-block py-1px px-1 radius-1 no-underline text-dark-tp3 text-600 bgc-h-primary-l2 text-95">
-                                Documentos
-                              </a>
-                              <p class="text-dark-tp4 pl-1">
-                                Entenda como utilizar os programas.
-                              </p>
-                            </div>
-                          </div>
-
-                          <div class="d-flex align-items-center">
-                            <div class="pos-rel">
-                              <i class="bgc-red-l3 w-4 h-4 radius-round position-r mr-2 mt-25"></i>
-                              <i class="fa fa-list text-160 text-danger mr-2 mb-3 w-6 h-6 radius-round text-center pt-1 pos-rel"></i>
-                            </div>
-                            <div>
-                              <a href="#" class="d-block py-1px px-1 radius-1 no-underline text-dark-tp3 text-600 bgc-h-primary-l2 text-95">
-                                Codigos
-                              </a>
-                              <p class="text-dark-tp4 pl-1">
-                                Veja os maiores snippets utilizados pela equipe.
-                              </p>
-                            </div>
-                          </div>
-                        </div><!-- .col:mega links -->
-                      </div><!-- .row: mega -->
-
-
-                      <div class="px-4 mx-0 order-first order-lg-last bgc-primary-l4 border-t-1 brc-secondary-l2">
-                        <div class="py-3">
-                          <button class="mx-2px btn px-25 py-2 text-100 btn-blue radius-round px-4 border-2">
-                            Comece sua jornada em logística conosco!
-                          </button>
-
-                          <div class="d-block d-md-inline-block mt-3 mt-md-0">
-                            <span class="text-dark-tp3 ml-3">
-                                    ou ligue para nós: 
-                                  </span>
-
-                            <b class="text-600">
-                              (23) 4002-8922
-                            </b>
-                          </div>
-                        </div>
-                      </div><!-- .row:megamenu big buttons -->
-                    </div>
-                  </li>
-
-                  <li class="nav-item dropdown mx-1px">
-                    <a class="nav-link" href="#">
-                      Times
-                    </a>
-                  </li>
-
-                  <li class="nav-item dropdown mx-1px">
-                    <a class="nav-link" href="#">
-                      <i class="fa fa-magic mr-15"></i>
-                      Contatos
-                    </a>
-                  </li>
-
-
-                  <li class="nav-item ml-xl-2">
-                    <a class="d-none d-lg-block nav-link h-auto py-15 mt-1 bgc-black-tp8 bgc-h-black-tp7 text-white radius-1" href="#">
-                      Sobre
-                    </a>
-
-                    <a class="d-lg-none nav-link" href="#">
-                      ** Special Offer **
-                    </a>
-                  </li>
-                </ul><!-- /.navbar-nav menu -->
-              </div><!-- /.navbar-nav -->
-
-            </div><!-- /.navbar-menu.navbar-collapse -->
-
-
-            <button type="button" class="d-style btn btn-burger static collapsed mr-2 px-4 navbar-toggler d-flex d-lg-none" data-toggle="collapse" data-target="#navbarMenu2-dark" aria-controls="navbarMenu2-dark" aria-expanded="false" aria-label="Toggle navbar menu">
-              <i class="fa fa-caret-down d-collapsed text-80"></i>
-              <i class="fa fa-caret-up d-n-collapsed text-80"></i>
-
-              <i class="fa fa-user ml-2"></i>
-            </button><!-- mobile navbar toggler button -->
-
-
-            <div class="navbar-menu collapse navbar-collapse navbar-backdrop" id="navbarMenu2-dark">
-              <div class="navbar-nav">
-                <ul class="nav nav-compact">
-
-                  <li class="nav-item dropdown px-lg-2 d-lg-flex flex-column justify-content-center">
-                    <a class="d-none d-lg-block h-auto btn btn-outline-white btn-bold radius-round border-2 dropdown-toggle px-2 px-xl-3" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                      Login
-                    </a>
-
-                    <a class="d-lg-none nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                      <i class="fa fa-caret-right bgc-white text-blue radius-round py-2 px-3 mr-2"></i>
-                      Login
-                    </a>
-
-                    <div style="width: 20rem;" data-display="static" class="dropdown-menu dropdown-menu-right overflow-hidden dropdown-animated animated-2 shadow radius-1 p-2 p-lg-0 border-0 mt-lg-n1 mr-lg-n2">
-                      <!-- login dialog -->
-                      <h4 class="text-120 mb-3 text-secondary-d3 px-3 mt-3 mb-2">Please enter your details</h4>
-                      <hr class="border-dotted brc-default-l2" />
-                      <form class="dropdown-clickable text-grey-d2">
-                        <div class="dropdown-body my-25">
-                          <div class="form-group mx-3">
-                            <div class="d-flex align-items-center input-floating-label text-blue-m1 brc-blue-m2">
-                              <input placeholder="Username" type="text" class="form-control pr-4 shadow-none" autocomplete="off" />
-                              <i class="fa fa-user text-grey-m2 ml-n4"></i>
-                              <label class="floating-label text-grey-l1 ml-n3">Username</label>
-                            </div>
-                          </div>
-
-                          <div class="form-group mx-3">
-                            <div class="d-flex align-items-center input-floating-label text-blue-m1 brc-blue-m2">
-                              <input placeholder="Password" type="password" class="form-control pr-4 shadow-none" autocomplete="off" />
-                              <i class="fa fa-key text-grey-m2 ml-n4"></i>
-                              <label class="floating-label text-grey-l1 ml-n3">Password</label>
-                            </div>
-                          </div>
-
-                          <div class="mx-3">
-                            <label class="d-inline-block mt-2 text-secondary-d2">
-                              <input type="checkbox" class="mr-1" />
-                              Remember me
-                            </label>
-                          </div>
-                        </div>
-
-                        <div class="dropdown-footer text-center py-25 bgc-default-l4 border-t-1 brc-default-l2">
-                          <button type="button" class="btn px-4 py-15 text-95 btn-blue" data-dismiss="dropdown">
-                            Login
-                          </button>
-
-                          <button type="button" class="btn px-25 py-15 text-95 btn-outline-green btn-bgc-white">
-                            Register
-                          </button>
-                        </div>
-                      </form>
-                    </div>
-                  </li>
-
-
-                  <li class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle px-lg-3" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                      <i class="text-140 fa fa-search"></i>
-                      <span class="d-lg-none ml-2">
-                              Busca
-                          </span>
-                    </a>
-                    <div style="width: 20rem;" data-display="static" class="dropdown-menu dropdown-menu-right dropdown-animated animated-2 dropdown-caret radius-1 p-2 p-lg-0 border-0 mt-lg-n1 mr-lg-n2 shadow">
-                      <form class="dropdown-clickable text-grey-d2">
-                        <div class="dropdown-body my-25">
-                          <div class="px-2 px-md-3">
-                            <input type="text" class="form-control shadow-none m-0" placeholder="Digite algo para pesquisar..." />
-                          </div>
-                        </div>
-
-                        <div class="dropdown-footer py-2 text-center pos-rel border-t-1 brc-secondary-l2">
-                          <button type="button" class="btn px-4 btn-sm btn-primary" data-dismiss="dropdown">Buscar</button>
-                          <button type="reset" class="btn btn-sm btn-outline-secondary">Limpar</button>
-                        </div>
-                      </form>
-                    </div>
-                  </li>
-
-
-                  <li class="nav-item">
-                    <a href="#" class="nav-link">
-                      <i class="text-140 far fa-heart text-yellow-l3"></i>
-                      <span class="d-lg-none ml-2 text-yellow-l3">
-                              Salvar
-                          </span>
-                    </a>
-                  </li>
-
-
-                  <li class="nav-item px-3 py-3">
-                    <span class="text-white p-2 border-b-3 brc-white-tp5 bgc-h-white-tp9 radius-t-1">
-                          <i class="fa fa-phone fa-flip-horizontal text-125 text-green-l4 mr-1"></i>
-      
-                          <span class="text-90 ml-1 ml-lg-0 d-lg-none d-xl-inline-block">
-                              LIGUE AGORA
-                          </span>
-
-                    <span class="ml-1 text-600 letter-spacing-1 d-lg-none d-xl-inline-block">
-                            4002-8922
-                          </span>
-                    </span>
-                  </li>
-
-                </ul>
-              </div>
-            </div><!-- .navbar-menu -->
-
-
-
-          </div><!-- /.container -->
-        </div><!-- /.navbar-inner -->
-      </nav>
-      <nav class="navbar navbar-expand-lg navbar-white d-none" id="navbar-light">
-        <div class="navbar-inner">
-          <div class="container">
-
-
-            <button type="button" class="btn btn-burger burger-times static navbar-toggler collapsed d-flex d-lg-none ml-2" data-toggle="collapse" data-target="#navbarMenu1-light" aria-controls="navbarMenu1-light" aria-expanded="false" aria-label="Toggle navbar menu">
-              <span class="bars text-dark-tp3"></span>
-            </button><!-- mobile navbar toggler button -->
-
-            <button type="button" class="d-style mr-2 px-4 navbar-toggler btn btn-burger static collapsed d-flex d-lg-none" data-toggle="collapse" data-target="#navbarMenu2-light" aria-controls="navbarMenu2-light" aria-expanded="false" aria-label="Toggle navbar menu">
-              <i class="fa fa-caret-down d-collapsed text-grey-m1 text-80"></i>
-              <i class="fa fa-caret-up d-n-collapsed text-grey-m1 text-80"></i>
-
-              <i class="fa fa-user text-orange-d1 ml-2"></i>
-            </button><!-- mobile navbar toggler button -->
-
-          </div><!-- /.container -->
-        </div><!-- /.navbar-inner -->
-      </nav>
       <div class="main-container bgc-white">
 
         <div role="main" class="main-content">
@@ -863,7 +541,7 @@ include('../model/session.php')
                               </li>
                               <li>
                                 <i class="fa fa-caret-right text-125 text-orange mr-1"></i>
-                                E mesmo assim, com um você já consegue ter tudo necessário para administrar extoque de forma efetiva.
+                                E mesmo assim, com um você já consegue ter tudo necessário para administrar estoque de forma efetiva.
                               </li>
                               <li>
                                 <i class="fa fa-caret-right text-125 text-orange mr-1"></i>
@@ -1327,12 +1005,10 @@ include('../model/session.php')
 
     <!-- include vendor scripts used in "Landing Page 1" page. see "/views//pages/partials/landing-page-1/@vendor-scripts.hbs" -->
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.13.0/Sortable.min.js"></script>
 
     <!-- include ace.js -->
     <script src="../includes/ace.min.js"></script>
-    <script src="../includes/ace-themes-2.min.js"></script>
-    <script src="../includes/ace-themes.css"></script>
     <script src="../includes/jquery.js"></script>
     <script src="../includes/popper.js"></script>
     <script src="../includes/bootstrap.js"></script>
@@ -1450,6 +1126,148 @@ include('../model/session.php')
 
       })
     </script>
+    <script>
+            jQuery(function($) {
+            
+            // show tooltips only when not touchscreen
+            if (!('ontouchstart' in window)) $('[data-toggle="tooltip"]').tooltip({
+                container: 'body'
+            })
+            
+            
+            // display the message only 2 times
+            var displayed = parseInt(localStorage.getItem('welcome.classic.ace') || '0');
+            if (displayed < 2) {
+                localStorage.setItem('welcome.classic.ace', displayed + 1)
+            
+                $.aceToaster.add({
+                placement: 'tc',
+                body: "<div class='py-2 pl-1 pr-3 d-flex '>\
+                        <span class='d-inline-block mr-2 text-center py-3 px-1'>\
+                        <i class='pos-abs fa fa-leaf fa-2x w-6 text-dark-m3 mt-2px'></i>\
+                        <i class='pos-rel fa fa-leaf fa-2x w-6 text-success-m3 mr-1'></i>\
+                        </span>\
+                        <div>\
+                        <h3 class='text-125 text-success'>Welcome to Ace!</h3>\
+                        <p class='mb-1'>A lightweight, feature-rich, customizable and easy to use admin template!</p>\
+                        </div>\
+                        <button data-dismiss='toast' class='btn btn-sm btn-brc-tp btn-lighter-grey btn-h-lighter-danger btn-a-lighter-danger radius-round position-tr mt-1 mr-2px'>\
+                        <i class='fa fa-times px-1px'></i>\
+                        </button>\
+                    </div>",
+            
+                width: 500,
+                delay: 10,
+                //sticky: true,
+            
+                progress: 'position-tl bgc-success-tp1 pt-3px',
+                progressReverse: true,
+            
+                close: false,
+                //belowNav: true,
+            
+                className: 'bgc-white overflow-hidden border-0 p-0 radius-0',
+            
+                bodyClass: 'border-1 border-t-0 brc-secondary-l2 text-dark-tp3 text-120 p-2',
+                headerClass: 'd-none'
+                })
+            }
+            
+            
+            //////////////////////////////////////////////////
+            // Sortable task list
+            Sortable.create(document.getElementById('tasks'), {
+                draggable: ".task-item",
+                filter: "label.checkbox",
+                preventOnFilter: false,
+                animation: 200,
+            
+                ghostClass: "bgc-yellow-l1", // Class name for the drop placeholder
+                chosenClass: "", // Class name for the chosen item
+                dragClass: "", // Class name for the dragging item
+            })
+            
+            // toggle tasks checkbox on/off
+            $('#tasks input[type=checkbox]').on('change', function() {
+                $(this).closest('#tasks > div').toggleClass('bgc-secondary-l4', this.checked).find('label').toggleClass('line-through text-grey-d2', this.checked);
+            })
+            
+            
+            
+            //////////////////////////////////////////////////
+            //draw charts
+            
+            
+            // make sure no animation is displayed according to user preferences
+            var _animate = !AceApp.Util.isReducedMotion()
+            
+            
+            // Traffic Sources piechart
+            var trafficSourceCanvas = document.getElementById('traffic-source-chart');
+            
+            var trafficSourcePieChart = new Chart(trafficSourceCanvas, {
+                type: 'doughnut',
+                data: {
+                datasets: [{
+                    label: 'Traffic Sources',
+                    data: [40.7, 27.5, 9.3, 19.6, 4.9],
+                    backgroundColor: [
+                    "#4ca5ae",
+                    "#f18e5d",
+                    "#ea789d",
+                    "#22c1e4",
+                    "#e2e3e4"
+                    ],
+                }],
+                labels: [
+                    'Social Networks',
+                    'Search Engines',
+                    'Ad Campaings',
+                    'Direct Traffic',
+                    'Other'
+                ]
+                },
+            
+                options: {
+                responsive: true,
+            
+                cutoutPercentage: 70,
+                legend: {
+                    display: false
+                },
+                animation: {
+                    animateRotate: true,
+                    duration: _animate ? 1000 : false
+                },
+                tooltips: {
+                    enabled: true,
+                    cornerRadius: 0,
+                    bodyFontColor: '#fff',
+                    bodyFontSize: 14,
+                    fontStyle: 'bold',
+            
+                    backgroundColor: 'rgba(34, 34, 34, 0.73)',
+                    borderWidth: 0,
+            
+                    caretSize: 5,
+            
+                    xPadding: 12,
+                    yPadding: 12,
+            
+                    callbacks: {
+                    label: function(tooltipItem, data) {
+                        return ' ' + data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index] + '%'
+                    }
+                    }
+                }
+                }
+            })
+            
+            // place the legends
+            $(trafficSourceCanvas)
+                .parent().after("<div id='traffic-source-legends' class='piechart-legends text-95 text-secondary-d3'>" + trafficSourcePieChart.generateLegend() + "</div>")
+            
+      <script/>
   </body>
 
 </html>

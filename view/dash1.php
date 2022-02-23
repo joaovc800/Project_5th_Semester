@@ -1,3 +1,6 @@
+<?php
+include('../model/session.php')
+?>
 <html lang="en" style="--scrollbar-width:15px; --moz-scrollbar-thin:15px;">
     <head>
         <meta charset="utf-8">
