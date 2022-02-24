@@ -22,7 +22,7 @@ try {
         $count = mysqli_num_rows($fetchQuery);
         if($count > 0){
             $senhaAlet = generatePassword();
-            $cQryUpdate = "UPDATE acessos SET PASSWORD = MD5('{$senhaAlet}') WHERE MATRICULA = '{$json->matricula}'";
+            $cQryUpdate = "UPDATE acessos SET PASSWORD = MD5('{$senhaAlet}'), RESET = 'S' WHERE MATRICULA = '{$json->matricula}'";
             $exeQry = mysqli_query($conect,$cQryUpdate);
             if($exeQry > 0){
                 $aRetorno['MSG'] = "Senha alterada com sucesso!";
