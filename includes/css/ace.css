@@ -4,7 +4,7 @@
  * You need a commercial license to use this product
  * https://bit.ly/35ciMLb
  */
-html {
+ html {
   --navbar-height: 4.5rem;
   --navbar-sm-height: 4rem;
   --navbar-mobile-height: 4rem;
@@ -6650,7 +6650,6 @@ a:hover {
 .sidebar {
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
-  min-height: 100%;
   width: 16rem;
   width: var(--sidebar-width);
   position: relative;

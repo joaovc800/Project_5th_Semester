@@ -6,13 +6,13 @@ try {
     $aRetorno = array();
     $json = json_decode(file_get_contents('php://input'));
 
-    $cQry = "SELECT ID,
+    $cQry = "SELECT ID_USUARIO,
                     MATRICULA,
                     STATUS,
-                    USER 
+                    USERNAME 
                     FROM acessos 
                     WHERE PASSWORD = MD5('{$json->password}')
-                    AND USER = '{$json->user}'";
+                    AND USERNAME = '{$json->user}'";
 
     $fetchQuery = mysqli_query($conect,$cQry);
     $count = mysqli_num_rows($fetchQuery);
@@ -24,7 +24,7 @@ try {
             $aRetorno['ERRO'] = false;
             $_SESSION['DADOS_USER'] = $ret;
         }
-        $aRetorno['REDIRECT'] = "view/painel.php";
+        $aRetorno['REDIRECT'] = "view/home.php";
     }else{
         $aRetorno['MSG'] = "Login inválido, por favor verifique seus dados.";
         $aRetorno['ERRO'] = true;

@@ -154,6 +154,7 @@
                                                 </div>
                                             </div>  
                                         </div>
+                                        
                                         <div class="form-row">
                                             <div class="col-12 col-md-6 offset-md-3 d-flex flex-column align-items-center justify-content-center">
                                                 <hr class="brc-default-m4 w-100 mb-2">
@@ -172,7 +173,7 @@
                                                 </div>
                                                 <div id="msg-error" class="mt-5 container text-center"></div>
                                             </div>
-                                        </div>
+                                        </div class="form-row">
                                             <div class="tab-pane mh-100 px-3 px-lg-0 pb-3" id="id-tab-signup" data-swipe-prev="#id-tab-login">
                                                <div class="position-tl ml-3 mt-3 mt-lg-0">
                                                    <a href="#" class="btn btn-light-default bg-transparent" data-toggle="tab" data-target="#id-tab-login"><i class="fa fa-arrow-left"></i></a>
@@ -190,7 +191,6 @@
                                                    <h1 class="text-170">
                                                        <span class="text-blue-d1">Inventory <span class="text-80 text-dark-tp4">Control</span></span>
                                                    </h1>
-
                                                    Create an Account
                                                </div>
 

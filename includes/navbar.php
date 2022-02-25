@@ -11,6 +11,7 @@
                	            </span>
                         </a>
                   	</li>
+<<<<<<< HEAD
                     <li class="nav-item">
                         <a href="#" class="nav-link">
                	            <i class="nav-icon fa fa-undo"></i>
@@ -19,6 +20,16 @@
                	            </span>
                         </a>
                   	</li>
+=======
+					<li class="nav-item">
+						<a href="#" class="nav-link dropdown-toggle">
+							<i class="nav-icon fa fa-cube"></i>
+							<span class="nav-text fadeable">
+								<span>Layouts</span>
+							</span>
+						</a>
+					</li>
+>>>>>>> 2ca319a67c17b61860b67c635eb8bf2c69316d73
                	</ul>
             </div>
         </div>

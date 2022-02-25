@@ -1,9 +1,13 @@
 request = new XMLHttpRequest();
 request.onreadystatechange = function(){
     if(this.status == 200 && this.readyState == 4){
+<<<<<<< HEAD
         
         if(this.responseText != ""){
             
+=======
+        if(this.responseText != ""){
+>>>>>>> 2ca319a67c17b61860b67c635eb8bf2c69316d73
             var json = JSON.parse(this.responseText);
 
             if(json.RESET == "S"){
@@ -44,6 +48,7 @@ request.onreadystatechange = function(){
     
                 container.innerHTML = div;
                 document.body.appendChild(container);
+<<<<<<< HEAD
             }
 
             function tooglePass(idIcon,classPass){
@@ -134,6 +139,9 @@ request.onreadystatechange = function(){
                 requestChangePass.open("POST","../model/reset.php",false);
                 requestChangePass.send(JSON.stringify(data));
             });
+=======
+            }  
+>>>>>>> 2ca319a67c17b61860b67c635eb8bf2c69316d73
         }
             
     }
@@ -142,12 +150,106 @@ request.onreadystatechange = function(){
 request.open("POST","../model/verificar_reset.php",false);
 request.send();
 
+<<<<<<< HEAD
 
 $("body").on("click",".nav-item",function(){
     $(".nav-item").removeClass("active")
     $(this).addClass("active");
+=======
+//funcões
+function tooglePass(idIcon,classPass){
+    var input = document.querySelector("#" + idIcon);
+    var icon = document.querySelector("." + classPass);
+    if(input.type == "text"){
+        input.type = "password";
+        icon.classList.remove("fa-eye");
+        icon.classList.add("fa-eye-slash");
+        
+    }else{
+        input.type = "text";
+        icon.classList.remove("fa","fa-eye-slash");
+        icon.classList.add("fa","fa-eye");
+    }
+}
+
+// botões para mostrar senha
+var button1 = document.querySelector("#view_senha1");
+var button2 = document.querySelector("#view_senha2");
+button1.addEventListener("click",function(){
+    tooglePass("senha1","pass1")
+});
+
+button2.addEventListener("click",function(){
+    tooglePass("senha2","pass2")
+});
+
+//botões do modal
+document.querySelector(".bootbox-cancel").addEventListener("click",function(){
+    var div = document.getElementById("div-modal");
+    div.parentNode.removeChild(div);
+});
+
+document.querySelector(".bootbox-accept").addEventListener("click",function(){
+    const buttonThis = this;
+    buttonThis.setAttribute("disabled","disabled");
+    requestChangePass = new XMLHttpRequest();
+    requestChangePass.onreadystatechange = function(){
+        if(requestChangePass.readyState == 4 && requestChangePass.status == 200){
+            var json = JSON.parse(this.responseText);
+            
+            if(json.ERRO == false){
+                
+                var container = document.createElement("div");
+                container.setAttribute("id","div-msg");
+                var msg = `<div class="alert alert-success bgc-success-l3 brc-success-m2 d-flex align-items-center" role="alert">
+                                <i class="fas fa-info-circle mr-3 fa-2x text-success"></i>
+                                <div>
+                                    ${json.MSG}
+                                </div>
+                            </div>`;
+                container.innerHTML = msg
+                document.querySelector(".bootbox-body").appendChild(container)
+
+                setTimeout(() =>{     
+                    container.parentNode.removeChild(container);
+                    var div = document.getElementById("div-modal");
+                    div.parentNode.removeChild(div);
+                    buttonThis.removeAttribute("disabled");
+                },2500);
+            }else{
+                
+                var container = document.createElement("div");
+                container.setAttribute("id","div-msg");
+                var msg = `<div class="alert alert-danger bgc-danger-l3 brc-danger-m2 d-flex align-items-center" role="alert">
+                                <i class="fas fa-info-circle mr-3 fa-2x text-danger"></i>
+                                <div>
+                                    ${json.MSG}
+                                </div>
+                            </div>`;
+                container.innerHTML = msg
+                document.querySelector(".bootbox-body").appendChild(container)
+                setTimeout(() =>{     
+                    container.parentNode.removeChild(container);
+                    buttonThis.removeAttribute("disabled");
+                },3000)
+            }
+        }
+    }
+
+    const data = {
+        senha1: document.getElementById("senha1").value,
+        senha2: document.getElementById("senha2").value,
+        reset_user: true
+    }
+
+    requestChangePass.open("POST","../model/reset.php",false);
+    requestChangePass.send(JSON.stringify(data));
+>>>>>>> 2ca319a67c17b61860b67c635eb8bf2c69316d73
 });
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2ca319a67c17b61860b67c635eb8bf2c69316d73
