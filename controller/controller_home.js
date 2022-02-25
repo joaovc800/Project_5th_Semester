@@ -1,46 +1,50 @@
 request = new XMLHttpRequest();
 request.onreadystatechange = function(){
     if(this.status == 200 && this.readyState == 4){
-        var json = JSON.parse(this.responseText);
-        if(json.RESET == "S"){
-            var container = document.createElement("div");
-            container.setAttribute("id","div-modal");
-            var div = `<div class="bootbox modal col-12 fade bootbox-prompt show" style="display: block" tabindex="-1" role="dialog" aria-modal="true">
-                        <div class="modal-dialog">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <h5 class="modal-title">
-                                  <p class="text-orange-d2 mb-0">Faça a sua redefinição de senha.</p>
-                              </h5>
-                          </div>
-                          <div class="modal-body">
-                            <div class="bootbox-body">  
-                                <div class="mb-3 pos-rel">
-                                    <input type="password" class="form-control form-control-lg pr-5" placeholder="Digite sua nova senha" id="senha1">
-                                    <button id="view_senha1" type="button" class="btn btn-sm border-0 btn-white bgc-h-warning-l2 text-125 position-tr mt-1 mr-1 no-underline radius-1 d-style">
-                                        <i class="pass1 fa fa-eye-slash text-90 d-n-active w-3"></i>
-                                    </button>
-                                </div>     
-                                <div class="pos-rel mb-3">
-                                    <input type="password" class="form-control form-control-lg pr-5" placeholder="Repita a senha" id="senha2">
-                                    <button id="view_senha2" type="button" class="btn btn-sm border-0 btn-white bgc-h-warning-l2 text-125 position-tr mt-1 mr-1 no-underline radius-1 d-style">
-                                        <i class="pass2 fa fa-eye-slash text-90 d-n-active w-3"></i>
-                                    </button>
-                                </div>     
+        if(this.responseText != ""){
+            var json = JSON.parse(this.responseText);
+
+            if(json.RESET == "S"){
+                var container = document.createElement("div");
+                container.setAttribute("id","div-modal");
+                var div = `<div class="bootbox modal col-12 fade bootbox-prompt show" style="display: block" tabindex="-1" role="dialog" aria-modal="true">
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title">
+                                      <p class="text-orange-d2 mb-0">Faça a sua redefinição de senha.</p>
+                                  </h5>
+                              </div>
+                              <div class="modal-body">
+                                <div class="bootbox-body">  
+                                    <div class="mb-3 pos-rel">
+                                        <input type="password" class="form-control form-control-lg pr-5" placeholder="Digite sua nova senha" id="senha1">
+                                        <button id="view_senha1" type="button" class="btn btn-sm border-0 btn-white bgc-h-warning-l2 text-125 position-tr mt-1 mr-1 no-underline radius-1 d-style">
+                                            <i class="pass1 fa fa-eye-slash text-90 d-n-active w-3"></i>
+                                        </button>
+                                    </div>     
+                                    <div class="pos-rel mb-3">
+                                        <input type="password" class="form-control form-control-lg pr-5" placeholder="Repita a senha" id="senha2">
+                                        <button id="view_senha2" type="button" class="btn btn-sm border-0 btn-white bgc-h-warning-l2 text-125 position-tr mt-1 mr-1 no-underline radius-1 d-style">
+                                            <i class="pass2 fa fa-eye-slash text-90 d-n-active w-3"></i>
+                                        </button>
+                                    </div>     
+                                </div>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-danger btn-default bootbox-cancel">Cancel</button>
+                                <button type="button" class="btn btn-primary bootbox-accept">OK</button>
+                              </div>
                             </div>
                           </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-danger btn-default bootbox-cancel">Cancel</button>
-                            <button type="button" class="btn btn-primary bootbox-accept">OK</button>
-                          </div>
                         </div>
-                      </div>
-                    </div>
-                    <div class="modal-backdrop fade show"></div>`;
-
-            container.innerHTML = div;
-            document.body.appendChild(container);
-        }      
+                        <div class="modal-backdrop fade show"></div>`;
+    
+                container.innerHTML = div;
+                document.body.appendChild(container);
+            }  
+        }
+            
     }
 }
 
@@ -68,7 +72,7 @@ var button1 = document.querySelector("#view_senha1");
 var button2 = document.querySelector("#view_senha2");
 button1.addEventListener("click",function(){
     tooglePass("senha1","pass1")
-})
+});
 
 button2.addEventListener("click",function(){
     tooglePass("senha2","pass2")
@@ -81,6 +85,8 @@ document.querySelector(".bootbox-cancel").addEventListener("click",function(){
 });
 
 document.querySelector(".bootbox-accept").addEventListener("click",function(){
+    const buttonThis = this;
+    buttonThis.setAttribute("disabled","disabled");
     requestChangePass = new XMLHttpRequest();
     requestChangePass.onreadystatechange = function(){
         if(requestChangePass.readyState == 4 && requestChangePass.status == 200){
@@ -103,7 +109,8 @@ document.querySelector(".bootbox-accept").addEventListener("click",function(){
                     container.parentNode.removeChild(container);
                     var div = document.getElementById("div-modal");
                     div.parentNode.removeChild(div);
-                },3000);
+                    buttonThis.removeAttribute("disabled");
+                },2500);
             }else{
                 
                 var container = document.createElement("div");
@@ -118,6 +125,7 @@ document.querySelector(".bootbox-accept").addEventListener("click",function(){
                 document.querySelector(".bootbox-body").appendChild(container)
                 setTimeout(() =>{     
                     container.parentNode.removeChild(container);
+                    buttonThis.removeAttribute("disabled");
                 },3000)
             }
         }

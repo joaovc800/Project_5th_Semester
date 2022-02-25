@@ -16,19 +16,36 @@ include('../model/session.php');
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600&amp;display=swap"> 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.css">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600&display=swap">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="../includes/css/ace.min.css">
     <link rel="stylesheet" type="text/css" href="../includes/css/ace-themes.min.css">
     <link rel="stylesheet" type="text/css" href="../includes/css/ace.css">
     <link rel="stylesheet" type="text/css" href="../includes/css/ace-themes.css"></link>
     <link rel="stylesheet" href="../includes/css/ace.css">
     <link rel="stylesheet" href="../includes/css/ace-font.css">
-    <link rel="stylesheet" href="../includes/@page-style.css">
-    <link rel="icon" type="image/png" href="./../includes/favicon.png" />
     
   </head>
 
-  <body>
-    
+<body>
+	<div class="body-container">
+		<nav class="navbar navbar-expand-lg navbar-fixed navbar-default">
+			<div class="navbar-inner">
+				<div class="navbar-intro justify-content-xl-between">
+					<a class="navbar-brand text-white">
+						<i class="fa fa-leaf">
+							<span>Controle</span>
+							<span>Estoque</span>
+						</i>
+            		</a>
+          		</div>
+        	</div>
+      	</nav>
+      	<div class="main-container">
+			  <?php include("../includes/navbar.php"); ?>
+      	</div>
+    </div>
+
     <script src="../controller/controller_home.js"></script>
-  </body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</body>
 </html>
