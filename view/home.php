@@ -28,24 +28,13 @@ include('../model/session.php');
 
 <body>
 	<div class="body-container">
-		<nav class="navbar navbar-expand-lg navbar-fixed navbar-default">
-			<div class="navbar-inner">
-				<div class="navbar-intro justify-content-xl-between">
-					<a class="navbar-brand text-white">
-						<i class="fa fa-leaf">
-							<span>Controle</span>
-							<span>Estoque</span>
-						</i>
-            		</a>
-          		</div>
-        	</div>
-      	</nav>
+        <?php include("../includes/navbar.php"); ?>
       	<div class="main-container">
-			  <?php include("../includes/navbar.php"); ?>
+			  <?php include("../includes/sidebar.php"); ?>
       	</div>
     </div>
 
-    <script src="../controller/controller_home.js"></script>
+  <script src="../controller/controller_home.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </body>
 </html>
