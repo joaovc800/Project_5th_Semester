@@ -1,6 +1,8 @@
 <?php
 session_start();
 include("connect.php");
+include("functions.php");
+
 header("Content-type: application/json");
 
 try {
@@ -19,13 +21,14 @@ try {
             $aRetorno['MSG'] = "Reset de senha disponivel";
             $aRetorno['RESET'] = "S";
         }else{
-            $aRetorno['MSG'] = "Não tem reset de senha";
+            $aRetorno['MSG'] = "Nï¿½o tem reset de senha";
         }
     }
     
 } catch (\Throwable $th) {
     $aRetorno['MSG'] = "Error!";
     $aRetorno['ERRO'] = true;
+} finally {
+    echo json_encode($aRetorno);
 }
 
-echo json_encode($aRetorno);

@@ -51,6 +51,7 @@ try {
 } catch (\Throwable $th) {
     $aRetorno['ERRO'] = true;
     $aRetorno['MSG'] = "Error!";
+} finally {
+    $aRetorno = array_map_recursive('utf8_encode',$aRetorno);
+    echo json_encode($aRetorno);
 }
-
-echo json_encode($aRetorno);

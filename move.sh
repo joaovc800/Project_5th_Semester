@@ -1,0 +1,1 @@
+cp -r ./{controller,includes,model,view,index.php} ./dev_php/nginx/client/src
