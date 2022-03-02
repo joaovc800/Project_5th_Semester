@@ -20,7 +20,7 @@ try {
             $aRetorno['ERRO'] = false;
         }
     }else{
-        $aRetorno['MSG'] = "Error, não retornou dados";
+        $aRetorno['MSG'] = "Error, nÃ£o retornou dados";
         $aRetorno['ERRO'] = true;
     }
 
@@ -44,7 +44,7 @@ try {
             $aRetorno['ERRO'] = false;
         }
     }else{
-        $aRetorno['MSG'] = "Error, não retornou dados";
+        $aRetorno['MSG'] = "Error, nÃ£o retornou dados";
         $aRetorno['ERRO'] = true;
     }
 
