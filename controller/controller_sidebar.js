@@ -41,4 +41,12 @@ $(function(){
             }
         }
     });
+    
+    var menuLogout = `<li class="nav-item">
+                                    <a class="nav-link btn-menu-click btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse">
+                                        <i class="fas fa-arrow-right-from-bracket"></i>
+                                         Logout
+                                    </a>
+                                </li>`;
+    $(".menus").append(menuLogout);
 });
