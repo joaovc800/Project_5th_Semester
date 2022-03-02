@@ -40,7 +40,7 @@ $(function(){
                 }); 
                 
                 var menuLogout = `<li class="nav-item">
-                                    <a class="nav-link btn-menu-click btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" aria-expanded="false">
+                                    <a href="../model/logout.php" class="nav-link btn-menu-click btn btn-toggle align-items-center rounded">
                                         <i class="nav-icon fas fa-sign-out-alt"></i>
                                          Logout
                                     </a>
