@@ -62,24 +62,8 @@ request.onreadystatechange = function(){
                     div.parentNode.removeChild(div);
                 });
               }
-
-            function tooglePass(idIcon,classPass){
-                var input = document.querySelector("#" + idIcon);
-                var icon = document.querySelector("." + classPass);
-                if(input.type == "text"){
-                    input.type = "password";
-                    icon.classList.remove("fa-eye");
-                    icon.classList.add("fa-eye-slash");
-                    
-                }else{
-                    input.type = "text";
-                    icon.classList.remove("fa","fa-eye-slash");
-                    icon.classList.add("fa","fa-eye");
-                }
-            }
-
-
-            document.querySelector(".bootbox-accept").addEventListener("click",function(){
+            
+             document.querySelector(".bootbox-accept").addEventListener("click",function(){
                 const buttonThis = this;
                 buttonThis.setAttribute("disabled","disabled");
                 requestChangePass = new XMLHttpRequest();
@@ -134,6 +118,22 @@ request.onreadystatechange = function(){
 
                 requestChangePass.open("POST","../model/reset.php",false);
                 requestChangePass.send(JSON.stringify(data));
+
+            function tooglePass(idIcon,classPass){
+                var input = document.querySelector("#" + idIcon);
+                var icon = document.querySelector("." + classPass);
+                if(input.type == "text"){
+                    input.type = "password";
+                    icon.classList.remove("fa-eye");
+                    icon.classList.add("fa-eye-slash");
+                    
+                }else{
+                    input.type = "text";
+                    icon.classList.remove("fa","fa-eye-slash");
+                    icon.classList.add("fa","fa-eye");
+                }
+            }
+
             });
         }
             
