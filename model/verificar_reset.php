@@ -21,7 +21,7 @@ try {
             $aRetorno['MSG'] = "Reset de senha disponivel";
             $aRetorno['RESET'] = "S";
         }else{
-            $aRetorno['MSG'] = "N�o tem reset de senha";
+            $aRetorno['MSG'] = "Não tem reset de senha";
         }
     }
     
