@@ -44,24 +44,8 @@ request.onreadystatechange = function(){
     
                 container.innerHTML = div;
                 document.body.appendChild(container);
-            }
-
-            function tooglePass(idIcon,classPass){
-                var input = document.querySelector("#" + idIcon);
-                var icon = document.querySelector("." + classPass);
-                if(input.type == "text"){
-                    input.type = "password";
-                    icon.classList.remove("fa-eye");
-                    icon.classList.add("fa-eye-slash");
-                    
-                }else{
-                    input.type = "text";
-                    icon.classList.remove("fa","fa-eye-slash");
-                    icon.classList.add("fa","fa-eye");
-                }
-            }
-
-            // botões para mostrar senha
+                
+                // botões para mostrar senha
             var button1 = document.querySelector("#view_senha1");
             var button2 = document.querySelector("#view_senha2");
             button1.addEventListener("click",function(){
@@ -134,6 +118,23 @@ request.onreadystatechange = function(){
                 requestChangePass.open("POST","../model/reset.php",false);
                 requestChangePass.send(JSON.stringify(data));
             });
+            }
+
+            function tooglePass(idIcon,classPass){
+                var input = document.querySelector("#" + idIcon);
+                var icon = document.querySelector("." + classPass);
+                if(input.type == "text"){
+                    input.type = "password";
+                    icon.classList.remove("fa-eye");
+                    icon.classList.add("fa-eye-slash");
+                    
+                }else{
+                    input.type = "text";
+                    icon.classList.remove("fa","fa-eye-slash");
+                    icon.classList.add("fa","fa-eye");
+                }
+            }
+
         }
             
     }
