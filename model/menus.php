@@ -1,6 +1,7 @@
 <?php
 session_start();
 include("connect.php");
+include("functions.php");
 header("Content-type: application/json");
 $aRetorno = array();
 try {
@@ -20,7 +21,7 @@ try {
             $aRetorno['ERRO'] = false;
         }
     }else{
-        $aRetorno['MSG'] = "Error, nÃ£o retornou dados";
+        $aRetorno['MSG'] = "Error, não retornou dados";
         $aRetorno['ERRO'] = true;
     }
 
@@ -44,14 +45,14 @@ try {
             $aRetorno['ERRO'] = false;
         }
     }else{
-        $aRetorno['MSG'] = "Error, nÃ£o retornou dados";
+        $aRetorno['MSG'] = "Error, não retornou dados";
         $aRetorno['ERRO'] = true;
     }
 
 } catch (\Throwable $th) {
     $aRetorno['ERRO'] = true;
     $aRetorno['MSG'] = "Error!";
-} finally {
-    $aRetorno = array_map_recursive('utf8_encode',$aRetorno);
-    echo json_encode($aRetorno);
 }
+
+$aRetorno = array_map_recursive('utf8_encode',$aRetorno);
+echo json_encode($aRetorno);
