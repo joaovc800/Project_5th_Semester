@@ -44,7 +44,24 @@ request.onreadystatechange = function(){
     
                 container.innerHTML = div;
                 document.body.appendChild(container);
-            }
+                
+                // botões para mostrar senha
+                var button1 = document.querySelector("#view_senha1");
+                var button2 = document.querySelector("#view_senha2");
+                button1.addEventListener("click",function(){
+                    tooglePass("senha1","pass1")
+                });
+
+                button2.addEventListener("click",function(){
+                    tooglePass("senha2","pass2")
+                });
+
+                //botões do modal
+                document.querySelector(".bootbox-cancel").addEventListener("click",function(){
+                    var div = document.getElementById("div-modal");
+                    div.parentNode.removeChild(div);
+                });
+              }
 
             function tooglePass(idIcon,classPass){
                 var input = document.querySelector("#" + idIcon);
@@ -61,22 +78,6 @@ request.onreadystatechange = function(){
                 }
             }
 
-            // botões para mostrar senha
-            var button1 = document.querySelector("#view_senha1");
-            var button2 = document.querySelector("#view_senha2");
-            button1.addEventListener("click",function(){
-                tooglePass("senha1","pass1")
-            });
-
-            button2.addEventListener("click",function(){
-                tooglePass("senha2","pass2")
-            });
-
-            //botões do modal
-            document.querySelector(".bootbox-cancel").addEventListener("click",function(){
-                var div = document.getElementById("div-modal");
-                div.parentNode.removeChild(div);
-            });
 
             document.querySelector(".bootbox-accept").addEventListener("click",function(){
                 const buttonThis = this;
