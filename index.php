@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="includes/@fortawesome/fontawesome-free/css/regular.css">
     <link rel="stylesheet" href="includes/@fortawesome/fontawesome-free/css/solid.css">
     <link rel="stylesheet" href="includes/css/ace.css">
-    <link rel="stylesheet" href="includes/css/ace-font.css">
     <link rel="stylesheet" href="includes/@page-style.css">
     <title>Login</title>
     <style>
