@@ -38,15 +38,15 @@ $(function(){
                         $(".menu-" + key).append(submenu);                             
                     });
                 }); 
-            }
-        }
-    });
-    
-    var menuLogout = `<li class="nav-item">
+                
+                var menuLogout = `<li class="nav-item">
                                     <a class="nav-link btn-menu-click btn btn-toggle align-items-center rounded collapsed" href="../model/logout.php">
                                         <i class="fas fa-sign-out-alt"></i>
                                          Logout
                                     </a>
                                 </li>`;
-    $(".menus").prepend(menuLogout);
+                $(".menus").append(menuLogout);
+            }
+        }
+    });
 });
