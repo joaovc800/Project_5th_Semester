@@ -41,7 +41,7 @@ $(function(){
                 
                 var menuLogout = `<li class="nav-item">
                                     <a class="nav-link btn-menu-click btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" aria-expanded="false">
-                                        <i class="fas fa-sign-out-alt"></i>
+                                        <i class="nav-icon fas fa-sign-out-alt"></i>
                                          Logout
                                     </a>
                                 </li>`;
