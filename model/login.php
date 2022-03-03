@@ -29,7 +29,7 @@ try {
         }
         $aRetorno['REDIRECT'] = "view/home.php";
     }else{
-        $aRetorno['MSG'] = "Login invÃ¡lido, por favor verifique seus dados.";
+        $aRetorno['MSG'] = "Login inválido, por favor verifique seus dados.";
         $aRetorno['ERRO'] = true;
     }
     
