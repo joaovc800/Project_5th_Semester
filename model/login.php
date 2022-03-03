@@ -6,13 +6,16 @@ try {
     $aRetorno = array();
     $json = json_decode(file_get_contents('php://input'));
 
+    $user = mysqli_real_escape_string($conect,$json->user); //proteger contra sql injection
+    $password = mysqli_real_escape_string($conect,$json->password); //proteger contra sql injection
+
     $cQry = "SELECT ID_USUARIO,
                     MATRICULA,
                     STATUS,
                     USERNAME 
                     FROM acessos 
-                    WHERE PASSWORD = MD5('{$json->password}')
-                    AND USERNAME = '{$json->user}'";
+                    WHERE PASSWORD = MD5('{$password}')
+                    AND USERNAME = '{$user}'";
 
     $fetchQuery = mysqli_query($conect,$cQry);
     $count = mysqli_num_rows($fetchQuery);
@@ -26,7 +29,7 @@ try {
         }
         $aRetorno['REDIRECT'] = "view/home.php";
     }else{
-        $aRetorno['MSG'] = "Login inválido, por favor verifique seus dados.";
+        $aRetorno['MSG'] = "Login invÃ¡lido, por favor verifique seus dados.";
         $aRetorno['ERRO'] = true;
     }
     
