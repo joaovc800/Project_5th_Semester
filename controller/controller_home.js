@@ -1,4 +1,5 @@
-request = new XMLHttpRequest();
+$(function(){
+    request = new XMLHttpRequest();
 request.onreadystatechange = function(){
     if(this.status == 200 && this.readyState == 4){
         
@@ -57,11 +58,15 @@ request.onreadystatechange = function(){
             });
 
             //botões do modal
-            document.querySelector(".bootbox-cancel").addEventListener("click",function(){
+            $("body").on("click",".bootbox-cancel",function(){
+                
                 $(".modal-backdrop").remove();
                 var div = document.getElementById("div-modal");
                 div.parentNode.removeChild(div);
+                
             });
+               
+           
 
             document.querySelector(".bootbox-accept").addEventListener("click",function(){
                 const buttonThis = this;
@@ -149,6 +154,7 @@ request.send();
 $("body").on("click",".nav-item",function(){
     $(".nav-item").removeClass("active")
     $(this).addClass("active");
+});
 });
 
 
