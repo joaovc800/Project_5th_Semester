@@ -58,9 +58,9 @@ request.onreadystatechange = function(){
 
             //botões do modal
             document.querySelector(".bootbox-cancel").addEventListener("click",function(){
+                $(".modal-backdrop").remove();
                 var div = document.getElementById("div-modal");
                 div.parentNode.removeChild(div);
-                $(".modal-backdrop").remove();
             });
 
             document.querySelector(".bootbox-accept").addEventListener("click",function(){
