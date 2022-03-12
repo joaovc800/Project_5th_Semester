@@ -60,9 +60,7 @@ request.onreadystatechange = function(){
             //botões do modal
             $("body").on("click",".bootbox-cancel",function(){
                 
-                $(".modal-backdrop").remove();
-                var div = document.getElementById("div-modal");
-                div.parentNode.removeChild(div);
+                $("#div-modal").remove();
                 
             });
                
