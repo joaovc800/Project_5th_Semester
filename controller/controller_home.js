@@ -1,5 +1,4 @@
-$(function(){
-    request = new XMLHttpRequest();
+request = new XMLHttpRequest();
 request.onreadystatechange = function(){
     if(this.status == 200 && this.readyState == 4){
         
@@ -40,8 +39,7 @@ request.onreadystatechange = function(){
                               </div>
                             </div>
                           </div>
-                        </div>
-                        <div class="modal-backdrop fade show"></div>`;
+                        </div>`;
     
                 container.innerHTML = div;
                 document.body.appendChild(container);
@@ -58,13 +56,11 @@ request.onreadystatechange = function(){
             });
 
             //botões do modal
-            $("body").on("click",".bootbox-cancel",function(){
-                
-                $("#div-modal").remove();
-                
+            document.querySelector(".bootbox-cancel").addEventListener("click",function(){
+                var div = document.getElementById("div-modal");
+                div.parentNode.removeChild(div);
+                $(".modal-backdrop").remove();
             });
-               
-           
 
             document.querySelector(".bootbox-accept").addEventListener("click",function(){
                 const buttonThis = this;
@@ -89,9 +85,9 @@ request.onreadystatechange = function(){
 
                             setTimeout(() =>{     
                                 container.parentNode.removeChild(container);
-                                $(".modal-backdrop").remove();
                                 var div = document.getElementById("div-modal");
                                 div.parentNode.removeChild(div);
+                                $(".modal-backdrop").remove();
                                 buttonThis.removeAttribute("disabled");
                             },2500);
                         }else{
@@ -152,7 +148,6 @@ request.send();
 $("body").on("click",".nav-item",function(){
     $(".nav-item").removeClass("active")
     $(this).addClass("active");
-});
 });
 
 
