@@ -60,6 +60,7 @@ request.onreadystatechange = function(){
             document.querySelector(".bootbox-cancel").addEventListener("click",function(){
                 var div = document.getElementById("div-modal");
                 div.parentNode.removeChild(div);
+                $(".modal-backdrop").remove();
             });
 
             document.querySelector(".bootbox-accept").addEventListener("click",function(){
@@ -85,6 +86,7 @@ request.onreadystatechange = function(){
 
                             setTimeout(() =>{     
                                 container.parentNode.removeChild(container);
+                                $(".modal-backdrop").remove();
                                 var div = document.getElementById("div-modal");
                                 div.parentNode.removeChild(div);
                                 buttonThis.removeAttribute("disabled");
