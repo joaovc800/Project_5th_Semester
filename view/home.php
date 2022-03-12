@@ -43,7 +43,7 @@ include('../model/session.php');
 
   <script src="../controller/controller_home.js"></script>
   <script src="../controller/controller_sidebar.js"></script>
-  <script src="../includes/js/sidebar.js"></script>
+  <!-- <script src="../includes/js/sidebar.js"></script> -->
   <script src="../includes/bootstrap.js"></script>
   <script src="../includes/ace.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
