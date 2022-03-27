@@ -43,40 +43,22 @@
                                                 <div style="background-image: url(assets/image/login-bg-1.svg);" class="bgc-primary-l4 d-flex flex-column align-items-center justify-content-center">
                                                     <h1 class="mt-5"><a href="#"><i class="fa fa-leaf text-success-m2 text-125"></i></a></h1>
                                                     <h2 class="text-blue-d1">
-                                                        Inventory <span class="text-80 text-dark-tp4">Control</span>
+                                                        Wit <span class="text-80 text-dark-tp4">Controle</span>
                                                     </h2>
-                                                    <div class="mt-5 mx-4 text-120 text-dark-tp4 text-justify"> 
-                                                        <p>Inventory management system, friendly, easy and with the best usability on the market.</p>
-                                                        <br>
-                                                        <p>by wit solutions...</p>
-                                                        <hr class="mb-1">
-                                                        <div>
-                                                            <a id="id-start-carousel" href="#" class="text-sm text-grey d-inline-block mt-3">
-                                                                <i class="fas fa-image text-md text-purple-m2 mr-1"></i>
-                                                                Change background image
-                                                            </a>
-                                                            <br>
-                                                            <a id="id-remove-carousel" href="#" class="text-sm text-grey d-inline-block mt-3">
-                                                                <i class="fas fa-trash-alt text-md text-orange mr-1"></i>
-                                                                Remove this section
-                                                            </a>
-                                                            <br>
-                                                            <a id="id-fullscreen" href="#" class="text-sm text-grey d-inline-block mt-3">
-                                                                <i class="fa fa-expand text-md text-success-m2 mr-1"></i>
-                                                                Make full-size
-                                                            </a>
-                                                        </div>
+                                                    <div class="mt-5 mx-4 text-130 text-dark-tp4 text-justify p-2"> 
+                                                        <p>Sistema de controle de inventário, simples e com a melhor usabilidade encontrada no mercado atualmente.<br><br> Devido ao uso de tecnologias de alta qualidade para desenvolvimento<br> web, e a atuação de excelentes<br> profissionais em sua criação.</p>
                                                     </div>
                                                     <div class="mt-auto mb-4 text-dark-tp3">
                                                         Wit Solutions © 2022
                                                     </div>
                                                 </div>
                                             </div>
+
                                             <div class="carousel-item minw-100 h-100">
                                                 <div style="background-image: url(assets/image/login-bg-2.svg);" class="d-flex flex-column align-items-center justify-content-start">
                                                     <h1 class="mt-5"><i class="fa fa-leaf text-success-m2 text-125"></i></h1>
                                                     <h2 class="text-blue-l1">
-                                                        Inventory <span class="text-80 text-dark-tp3">Control</span>
+                                                        Controle de <span class="text-80 text-dark-tp3">inventário</span>
                                                     </h2>
                                                 </div>
                                             </div>
@@ -85,7 +67,7 @@
                                                     <div class="bgc-black-tp4 radius-1 p-3 w-90 text-center my-3 h-100">
                                                         <h1><i class="fa fa-leaf text-success-m2 text-125"></i></h1>
                                                         <h2 class="text-blue-l1">
-                                                            inventory <span class="text-80 text-white-tp3">Control</span>
+                                                            Controle de <span class="text-80 text-white-tp3">inventário</span>
                                                         </h2>
                                                     </div>
                                                 </div>
@@ -94,7 +76,7 @@
                                                 <div style="background-image: url(assets/image/login-bg-4.jpg);" class="d-flex flex-column align-items-center justify-content-start">
                                                     <h1 class="mt-5"><i class="fa fa-leaf text-success-m2 text-125"></i></h1>
                                                     <h2 class="text-blue-d1">
-                                                        Inventory <span class="text-80 text-dark-tp3">Control</span>
+                                                        Controle de <span class="text-80 text-dark-tp3">inventário</span>
                                                     </h2>
                                                 </div>
                                             </div>
@@ -110,7 +92,7 @@
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" data-toggle="tab" href="#id-tab-signup" role="tab" aria-controls="signup" aria-selected="false">
-                                                Signup
+                                                Cadastre-se
                                             </a>
                                         </li>
                                     </ul>
@@ -119,37 +101,37 @@
                                             <div class="d-none d-lg-block col-md-6 offset-md-3 mt-lg-4 px-0">
                                                 <h4 class="text-dark-tp4 border-b-1 brc-grey-l1 pb-1 text-130">
                                                     <i class="fa fa-coffee text-orange-m2 mr-1"></i>
-                                                    Welcome Back
+                                                    Bem vindo
                                                 </h4>
                                             </div>
                                         <div class="d-lg-none text-secondary-m1 my-4 text-center">
                                             <a href="#"><i class="fa fa-leaf text-success-m2 text-200 mb-4"></i></a>
                                             <h1 class="text-170">
-                                                <span class="text-blue-d1">Inventory<span class="text-80 text-dark-tp3">Control</span></span>
+                                                <span class="text-blue-d1">Controle de <span class="text-80 text-dark-tp3">inventário</span></span>
                                             </h1>
-                                             Welcome back
+                                             Bem vindo
                                         </div>
                                         <div class="form-row mt-4">
                                             <div class="form-group col-md-6 offset-md-3">
                                                 <div class="d-flex align-items-center input-floating-label text-blue-m1 brc-blue-m2">
-                                                    <input type="text" class="form-control form-control-lg pr-4 shadow-none" id="user" placeholder="Username">
+                                                    <input type="text" class="form-control form-control-lg pr-4 shadow-none" id="user" placeholder="Usuário">
                                                     <i class="fa fa-user text-grey-m2 ml-n4"></i>
                                                 </div>
                                             </div>
                                             <div class="form-group col-md-6 offset-md-3 mt-2 mt-md-1">
                                                 <div class="d-flex align-items-center input-floating-label text-blue-m1 brc-blue-m2">
-                                                    <input type="password" class="form-control form-control-lg pr-4 shadow-none" id="password" placeholder="Password">
+                                                    <input type="password" class="form-control form-control-lg pr-4 shadow-none" id="password" placeholder="Senha">
                                                     <i class="fa fa-key text-grey-m2 ml-n4"></i>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 offset-md-3 text-right text-md-right mt-n2 mb-2">
                                                 <a href="#" class="text-primary-m2 text-95" data-toggle="tab" data-target="#id-tab-forgot">
-                                                    Forgot Password?
+                                                    Esqueceu a senha?
                                                 </a>
                                             </div>
                                             <div class="form-group col-md-6 offset-md-3 mt-2 mt-md-1">
                                                 <div class="d-flex align-items-center input-floating-label text-blue-m1 brc-blue-m2">
-                                                    <button id="btn-submit" class="btn btn-success w-100">Access</button>
+                                                    <button id="btn-submit" class="btn btn-success w-100">Acesso</button>
                                                 </div>
                                             </div>  
                                         </div>
@@ -157,7 +139,7 @@
                                         <div class="form-row">
                                             <div class="col-12 col-md-6 offset-md-3 d-flex flex-column align-items-center justify-content-center">
                                                 <hr class="brc-default-m4 w-100 mb-2">
-                                                <div class="mt-n4 bgc-white-tp2 px-3 py-1 text-default-d1 text-90">Or Get Started Using</div>
+                                                <div class="mt-n4 bgc-white-tp2 px-3 py-1 text-default-d1 text-90">Ou cadastre-se com</div>
                                                     <div class="my-2">
                                                         <button type="button" class="btn btn-bgc-white btn-lighter-primary btn-h-primary btn-a-primary border-2 radius-round                                    btn-lg mx-1">
                                                             <i class="fab fa-facebook-f text-110"></i>
@@ -181,16 +163,16 @@
                                                <div class="d-none d-lg-block col-md-6 offset-md-3 mt-lg-4 px-0">
                                                    <h4 class="text-dark-tp4 border-b-1 brc-grey-l1 pb-1 text-130">
                                                        <i class="fa fa-user text-purple-m1 mr-1"></i>
-                                                       Create an Account
+                                                       Crie uma conta
                                                    </h4>
                                                </div>
 
                                                <div class="d-lg-none text-secondary-m1 my-4 text-center">
                                                    <i class="fa fa-leaf text-success-m2 text-200 mb-4"></i>
                                                    <h1 class="text-170">
-                                                       <span class="text-blue-d1">Inventory <span class="text-80 text-dark-tp4">Control</span></span>
+                                                       <span class="text-blue-d1">Controle de <span class="text-80 text-dark-tp4">Inventário</span></span>
                                                    </h1>
-                                                   Create an Account
+                                                   Crie uma conta
                                                </div>
 
                                                <form class="form-row mt-4">
@@ -206,7 +188,7 @@
                                                        <div class="d-flex align-items-center input-floating-label text-success-m1 brc-success-m2">
                                                            <input type="text" class="form-control form-control-lg pr-4 shadow-none" id="id-signup-username" autocomplete="off">
                                                            <i class="fa fa-user text-grey-m2 ml-n4"></i>
-                                                           <label class="floating-label text-grey-l1 text-100 ml-n3" for="id-signup-username">Username</label>
+                                                           <label class="floating-label text-grey-l1 text-100 ml-n3" for="id-signup-username">Usuário</label>
                                                        </div>
                                                    </div>
 
@@ -214,7 +196,7 @@
                                                        <div class="d-flex align-items-center input-floating-label text-success-m1 brc-success-m2">
                                                            <input type="password" class="form-control form-control-lg pr-4 shadow-none" id="id-signup-password" autocomplete="off">
                                                            <i class="fa fa-key text-grey-m2 ml-n4"></i>
-                                                           <label class="floating-label text-grey-l1 text-100 ml-n3" for="id-signup-password">Password</label>
+                                                           <label class="floating-label text-grey-l1 text-100 ml-n3" for="id-signup-password">Senha</label>
                                                        </div>
                                                    </div>
 
@@ -222,13 +204,13 @@
                                                        <div class="d-flex align-items-center input-floating-label text-success-m1 brc-success-m2">
                                                            <input type="password" class="form-control form-control-lg pr-4 shadow-none" id="id-signup-password2" autocomplete="off">
                                                            <i class="fas fa-sync-alt text-grey-m2 ml-n4"></i>
-                                                           <label class="floating-label text-grey-l1 text-100 ml-n3" for="id-signup-password2">Confirm Password</label>
+                                                           <label class="floating-label text-grey-l1 text-100 ml-n3" for="id-signup-password2">Confirmar</label>
                                                        </div>
                                                    </div>
 
                                                    <div class="d-none form-group col-md-6 offset-md-3 my-2">
                                                        <label class="text-secondary-m3 text-110 mb-25">
-                                                           Choose membership type
+                                                           Escolha tipo de serviço
                                                        </label>
                                                        <div class="row d-flex mx-1 mx-lg-0 btn-group btn-group-toggle" data-toggle="buttons">
 
@@ -238,7 +220,7 @@
 
                                                                <span class="d-flex flex-column align-items-center">
                                                                    <div class="font-bolder flex-grow-1">
-                                                                       Free
+                                                                       Grátis
                                                                    </div>
                                                                </span>
 
@@ -269,7 +251,7 @@
                                                    </div>
                                                    <div class="form-group col-md-6 offset-md-3 mt-2">
                                                        <button type="button" class="btn btn-success btn-block btn-md btn-bold mt-2 mb-3">
-                                                           Sign Up
+                                                           Cadastre-se
                                                        </button>
                                                    </div>
                                                </form>
@@ -280,14 +262,14 @@
                                                    <hr class="brc-default-m4 mt-0 mb-2 w-100">
 
                                                    <div class="p-0 px-md-2 text-dark-tp4 my-3">
-                                                       Already a member?
+                                                       Já é um membro?
                                                        <a class="text-blue-m2 text-600 mx-1" data-toggle="tab" data-target="#id-tab-login" href="#">
-                                                           Login here
+                                                           Login aqui
                                                        </a>
                                                    </div>
 
                                                    <hr class="brc-default-m4 w-100 mb-2">
-                                                   <div class="mt-n4 bgc-white-tp2 px-3 py-1 text-default-d1 text-90">Or Register Using</div>
+                                                   <div class="mt-n4 bgc-white-tp2 px-3 py-1 text-default-d1 text-90">Ou cadastre-se usando</div>
 
                                                    <div class="mt-2 mb-3">
                                                        <button type="button" class="btn btn-primary border-2 radius-round btn-lg mx-1">
@@ -313,27 +295,27 @@
                                             <div class="col-md-6 offset-md-3 mt-5 px-0">
                                                 <h4 class="pt-4 pt-md-0 text-dark-tp4 border-b-1 brc-grey-l1 pb-1 text-130">
                                                     <i class="fa fa-key text-brown-m2 mr-1"></i>
-                                                    Recover Password
+                                                    Recuperar senha
                                                 </h4>
                                             </div>
 
                                             <div class="form-row mt-4">
                                                 <div class="form-group col-md-6 offset-md-3">
                                                     <label class="text-secondary-m1 mb-3">
-                                                        Enter your email address and we'll send you the instructions:
+                                                        Insira seu email e enviaremos as instruções:
                                                     </label>
                                                     <div class="d-flex align-items-center">
-                                                        <input type="text" class="form-control form-control-lg pr-4 shadow-none" id="id-recover-email" placeholder="Username" autocomplete="off">
+                                                        <input type="text" class="form-control form-control-lg pr-4 shadow-none" id="id-recover-email" placeholder="Usuário" autocomplete="off">
                                                         <i class="fa fa-user text-grey-m2 ml-n4"></i>
                                                     </div>
                                                     <div class="d-flex align-items-center mt-2">
-                                                        <input type="text" class="form-control form-control-lg pr-4 shadow-none" id="id-recover-registration" placeholder="registration" autocomplete="off">
+                                                        <input type="text" class="form-control form-control-lg pr-4 shadow-none" id="id-recover-registration" placeholder="Registro" autocomplete="off">
                                                         <i class="fa fa-user text-grey-m2 ml-n4"></i>
                                                     </div>
                                                 </div>
                                                 <div class="form-group col-md-6 offset-md-3 mt-1">
                                                     <button id="btn-reset-pass" class="btn btn-warning btn-block btn-md btn-bold mt-2 mb-4">
-                                                        Continue
+                                                        Continuar
                                                     </button>
                                                 </div>
                                                 <div class="col-8 container"id="msg-reset"></div>
@@ -344,7 +326,7 @@
 
                                                 <div class="p-0 px-md-2 text-dark-tp4 my-3">
                                                     <a class="text-blue-m2 text-600" data-toggle="tab" data-target="#id-tab-login" href="#">
-                                                        Back to Login
+                                                        Voltar ao login
                                                     </a>
                                                 </div>
                                             </div>
