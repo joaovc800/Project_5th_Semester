@@ -1,5 +1,5 @@
 <?php
-include('../model/session.php');
+//include('../model/session.php');
 ?>
 <!doctype html>
 <html lang="pt-BR">
@@ -50,27 +50,35 @@ include('../model/session.php');
                     Adicionar Produtos
                 </h3>
               </div>
-              <div class="container card-body px-3 pb-3">
+              <div class="container card-body px-3">
                 <form>
                   <div class="form-row">
                     <div class="form-group col-md-6">
                       <div class="col-sm">
-                        <label for="lname">Nota fiscal:</label><br>
-                        <input type="text" name="n_fiscal" class="form-control col-sm-8 col-md-6" id="id-form-field-1">
+                        <label for="lname">Código do Produto:</label><br>
+                        <input maxlength="100" type="text" name="c_produto" class="form-control col-sm-8 col-md-7" id="id-form-field-1">
                       </div>
                     </div>
                     <div class="form-group col-md-6">
                       <div class="col-sm">
+                        <label for="lname">Nota Fiscal:</label><br>
+                        <input maxlength="9" type="text" name="n_fiscal" class="form-control col-sm-8 col-md-7" id="id-form-field-1">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group col-md-10">
+                      <div class="col-sm">
                         <label for="lname">Número serial:</label><br>
-                        <input type="text" name="n_serial" class="form-control col-sm-8 col-md-6" id="id-form-field-1">
+                        <input maxlength="12" type="text" name="n_serial" class="form-control col-sm col-md-11" id="id-form-field-1">
                       </div>
                     </div>
                   </div>
                   <div class="form-row">
                     <div class="form-group col-md-6">
                       <div class="col-sm">
-                        <label for="fname">Tipo do Ativo:</label>
-                        <select class="form-control col-sm-8 col-md-6" id="form-field-select-1">
+                        <label for="fname">Tipo de Ativo:</label>
+                        <select class="form-control col-sm-8 col-md-7" id="form-field-select-1">
                           <!-- no JS esta essa parte, esta unica option é para não mostrar o item primeiro -->
                           <option></option> 
                         </select>
@@ -79,7 +87,7 @@ include('../model/session.php');
                     <div class="form-group col-md-6">
                       <div class="col-sm">
                         <label for="lname">Localização:</label><br>
-                        <select class="form-control col-sm-8 col-md-6" id="form-field-select-2">
+                        <select class="form-control col-sm-8 col-md-7" id="form-field-select-2">
                           <!-- no JS esta essa parte, esta unica option é para não mostrar o item primeiro -->
                           <option></option>
                         </select>

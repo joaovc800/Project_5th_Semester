@@ -1,6 +1,5 @@
 <?php
-include('../model/session.php');
-echo $_SESSION['ID_USUARIO'];
+//include('../model/session.php');
 ?>
 <!doctype html>
 <html lang="pt-BR">
