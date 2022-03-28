@@ -25,13 +25,15 @@ include('../model/session.php');
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Nossos estilos -->
+    <link rel="stylesheet" type="text/css" href="../includes/estilo.css">
+
     <style>
         .navbar-brand span {
           font-family: 'Open Sans'
         }
     </style>
   </head>
-
   <body>
     <div class="body-container">
       <?php include("../includes/navbar.php"); ?>
@@ -42,21 +44,80 @@ include('../model/session.php');
         <div role="main" class="main-content">
           <div class="page-content container container-plus">
             <div class="card acard mt-2 mt-lg-3">
-              
-              <!--O form vai aqui-->
-
+              <div class="card-header">
+                <h3 class="card-title text-125 text-primary-d2">
+                  <i class="far fa-edit text-dark-l3 mr-1"></i>
+                    Adicionar Produtos
+                </h3>
+              </div>
+              <div class="container card-body px-3 pb-3">
+                <form>
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <div class="col-sm">
+                        <label for="lname">Nota fiscal:</label><br>
+                        <input type="text" name="n_fiscal" class="form-control col-sm-8 col-md-6" id="id-form-field-1">
+                      </div>
+                    </div>
+                    <div class="form-group col-md-6">
+                      <div class="col-sm">
+                        <label for="lname">Número serial:</label><br>
+                        <input type="text" name="n_serial" class="form-control col-sm-8 col-md-6" id="id-form-field-1">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <div class="col-sm">
+                        <label for="fname">Tipo do Ativo:</label>
+                        <select class="form-control col-sm-8 col-md-6" id="form-field-select-1">
+                          <!-- no JS esta essa parte, esta unica option é para não mostrar o item primeiro -->
+                          <option></option> 
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form-group col-md-6">
+                      <div class="col-sm">
+                        <label for="lname">Localização:</label><br>
+                        <select class="form-control col-sm-8 col-md-6" id="form-field-select-2">
+                          <!-- no JS esta essa parte, esta unica option é para não mostrar o item primeiro -->
+                          <option></option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group col-md-5">
+                      <div class="col-sm">
+                        <label for="lname">Descrição:</label><br>
+                        <textarea name="descricao" class="form-control pb-5" id="id-textarea-limit1" maxlength="200" placeholder="Digite..."  style="resize: none;"></textarea>
+                        <div class="mt-4">
+                          <button id="submit" class="btn btn-info btn-bold px-4"  type="submit">
+                            <i class="fa fa-check mr-1"></i>
+                            Submit
+                          </button>
+                          <button id="reset" class="btn btn-outline-lightgrey btn-bgc-white btn-bold ml-2 px-4" type="reset">
+                            <i class="fa fa-undo mr-1"></i>
+                            Reset
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <script src="../controller/controller_inserir.js"></script>
     <!-- scripts necessarios -->
     <script src="../controller/controller_home.js"></script>
     <script src="../controller/controller_sidebar.js"></script>
     <script src="../includes/js/sidebar.js"></script>
     <script src="../includes/bootstrap.js"></script>
     <script src="../includes/ace.js"></script>
-    <script src="../includes/js/custom.js">// script encontrado no final da pagina</script> 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>

@@ -1,0 +1,11 @@
+.form-control:hover, 
+.form-control:focus {
+    border-color: #258cc7;
+    box-shadow: 0px 0px 4px 0px rgba(37,140,199,0.81);
+    -webkit-box-shadow: 0px 0px 4px 0px rgba(37,140,199,0.81);
+    -moz-box-shadow: 0px 0px 4px 0px rgba(37,140,199,0.81);
+}
+
+label:hover {
+    cursor: text;
+}

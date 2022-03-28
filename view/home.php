@@ -1,5 +1,6 @@
 <?php
 include('../model/session.php');
+echo $_SESSION['ID_USUARIO'];
 ?>
 <!doctype html>
 <html lang="pt-BR">
@@ -25,7 +26,6 @@ include('../model/session.php');
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
-    
     <style>
         .navbar-brand span {
           font-family: 'Open Sans'
