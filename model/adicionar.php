@@ -9,7 +9,7 @@ try {
     
     // preparar dia da postagem
     date_default_timezone_set('America/Sao_Paulo');
-    $dia = strftime('%d/%m/%Y', strtotime('today')); 
+    $dia = strftime('%Y-%m-%d', strtotime('today')); 
 
     // verificar campos vázios
     if(  empty($json->c_produto) || empty($json->t_ativo) || empty($json->n_fiscal) || empty($json->n_serial) || empty($json->localizacao) || empty($json->descricao)){
