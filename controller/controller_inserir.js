@@ -6,7 +6,7 @@ function criaModal(param){
         nodeModal.remove();
     }
     var div = document.getElementById("div_container_modal");
-    var div = criaElemento({element: "div", id: "div_container_modal"});
+    var div = criaElemento({ element: "div", id: "div_container_modal"});
     document.body.appendChild(div);
     
     var modal = `<div class="modal fade" id="${param.idModal}" tabindex="-1" aria-hidden="true">
@@ -33,7 +33,7 @@ function criaModal(param){
         document.querySelector(".modal-footer").innerHTML += buttonAcao;
     }
 
-    document.getElementById("div_container_modal").innerHTML = modal
+    document.getElementById("div_container_modal").innerHTML = modal;
 }
 
 function criaElemento(param){
@@ -112,7 +112,7 @@ fetch("/model/dropowns.php")
 //////////////////////////////////////////
 // Pegar dados do form
 
-document.querySelector('form').addEventListener('submit', (e) => {
+document.querySelector('form').addEventListener('submit',  async (e) => {
     e.preventDefault(); // previnir redirect
     // pegar dados do form
     const dados = Array(Object.fromEntries( new FormData(e.target).entries()));
@@ -138,7 +138,7 @@ document.querySelector('form').addEventListener('submit', (e) => {
             console.log(dados);
         } else {
             criaModal({idModal: "modal_error", textContent: dados.MSG, btnAcao: false});;
-            $("div_container_modal").modal("show")
+            $("#modal_error").modal("show");
         }
     })
     .catch( err => {
@@ -146,7 +146,3 @@ document.querySelector('form').addEventListener('submit', (e) => {
     })
 });
 
-
-// idModal = "id"
-// TextContent = "o conteudo que vai dentro"
-// BtnAção = Se vai existir um botão que vai execuar ajax
