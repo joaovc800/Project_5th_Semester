@@ -1,39 +1,71 @@
 ////////////////////////////////////////
 // Modal do form
+/**
+ * Função para criar o modal, recebe o tipo do madal, o ID e o texto que pode ser uma string ou objeto.
+ * @param {{tipo:string,idModal:string,textContent:object}} param 
+ */
 function criaModal(param){
-    var nodeModal = document.getElementById("div_container_modal");
+    var nodeModal = document.getElementById("modal_erro");
     if(nodeModal){
         nodeModal.remove();
     }
-    var div = document.getElementById("div_container_modal");
-    var div = criaElemento({ element: "div", id: "div_container_modal"});
-    document.body.appendChild(div);
-    
-    var modal = `<div class="modal fade" id="${param.idModal}" tabindex="-1" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title">Aten��o</h5>
-                                <button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Close">
-                                    <i class="fas fa-times"></i>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <p class="text-center">${param.textContent}</p>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-danger btn-fecha-modal" data-bs-dismiss="modal">Close</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>`;
 
-    if(param.btnAcao == true){
-        var buttonAcao = `<button type="button" class="btn btn-primary btn-fecha-modal" data-bs-dismiss="modal">Salvar</button>`;
-        document.querySelector(".modal-footer").innerHTML += buttonAcao;
+    var nodeToast = document.getElementById("modal_sucesso");
+    if(nodeToast){
+        nodeToast.remove();
     }
 
-    document.getElementById("div_container_modal").innerHTML = modal;
+    // Cuidado com esta variavel, ela é universal para os modals
+    var modal;
+
+    if (param.tipo === 'modal') {
+        var div = document.getElementById("div_container_modal");
+        var div = criaElemento({ element: "div", id: "div_container_modal"});
+        document.body.appendChild(div);
+
+        modal = `<div class="modal fade" id="${param.idModal}" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Atenção</h5>
+                                    <button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Close">
+                                        <i class="fas fa-times"></i>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p class="text-center">${param.textContent}</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger btn-fecha-modal" data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>`;
+        document.getElementById("div_container_modal").innerHTML = modal;
+    } else if (param.tipo === 'toaster') {
+        var div = document.getElementById("toaster");
+        let toastInner = document.createElement("div")
+        toastInner.classList.add("form-group","col-md-6","d-flex","justify-content-center","align-items-center");
+        toastInner.setAttribute('id',`${param.idModal}`);
+
+        modal = `
+                    <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                    <div class="toast-header">
+                    <img src="..." class="rounded mr-2" alt="...">
+                    <strong class="mr-auto">Mensagem</strong>
+                    <small>0 minutos atrás</small>
+                    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="toast-body">
+                        ${param.textContent}
+                    </div>
+                </div>
+                `;
+        toastInner.innerHTML = modal;
+        div.append(toastInner);
+    }
 }
 
 function criaElemento(param){
@@ -119,6 +151,7 @@ document.querySelector('form').addEventListener('submit',  async (e) => {
     let dropdown = document.getElementById('form-field-select-1');
     let dropdown2 = document.getElementById('form-field-select-2');
     let resultado = {...dados[0], t_ativo:dropdown.options[dropdown.selectedIndex].value, localizacao:dropdown2.options[dropdown2.selectedIndex].value}
+    console.log(resultado)
     // enviar dados do form
     fetch('/model/adicionar.php', {
         method: 'POST', 
@@ -134,10 +167,13 @@ document.querySelector('form').addEventListener('submit',  async (e) => {
     })
     .then( res => res.json())
     .then( dados => {
-        if (dados.ERRO !== true) {
+        console.log(dados.ERRO)
+        if (dados.ERRO != true) {
             console.log(dados);
+            criaModal({tipo:'toaster',idModal: "modal_sucesso", textContent: dados.MSG});;
+            $(".toast").toast("show");
         } else {
-            criaModal({idModal: "modal_error", textContent: dados.MSG, btnAcao: false});;
+            criaModal({tipo:'modal',idModal: "modal_error", textContent: dados.MSG});;
             $("#modal_error").modal("show");
         }
     })

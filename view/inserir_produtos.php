@@ -1,5 +1,5 @@
 <?php
-//include('../model/session.php');
+include('../model/session.php');
 ?>
 <!doctype html>
 <html lang="pt-BR">
@@ -94,7 +94,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="form-row">
+                  <div class="form-row" id='toaster'>
                     <div class="form-group col-md-5">
                       <div class="col-sm">
                         <label for="lname">Descrição:</label><br>
@@ -149,3 +149,5 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery-knob@1.2.11/dist/jquery.knob.min.js"></script>
   </body>
 </html>
+
+                        

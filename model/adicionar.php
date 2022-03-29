@@ -23,8 +23,8 @@ try {
     $n_serial = mysqli_escape_string($conect,$json->n_serial);
     $localizacao = mysqli_escape_string($conect,$json->localizacao);
     $date = $dia;
-    // $id_usuario = $_SESSION['DADOS_USER']['ID_USUARIO'];
-
+    $id_usuario = $_SESSION['DADOS_USER']['ID_USUARIO'];
+    //$id_usuario = 4; // para testes
     // criar a query
     $query = "INSERT INTO inventario2 (CODIGO_PRODUTO, TIPO_ATIVO, DESCRICAO, NOTA_FISCAL, NUM_SERIAL, LOCALIZACAO, DATA, ID_USUARIO) VALUES ('{$c_produto}','{$t_ativo}','{$descricao}','{$n_fiscal}','{$n_serial}', '{$localizacao}', '{$date}', '{$id_usuario}')";
     
