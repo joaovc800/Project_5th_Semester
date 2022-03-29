@@ -120,12 +120,6 @@ document.querySelector('form').addEventListener('submit', (e) => {
     let dropdown2 = document.getElementById('form-field-select-2');
     let resultado = {...dados[0], t_ativo:dropdown.options[dropdown.selectedIndex].value, localizacao:dropdown2.options[dropdown2.selectedIndex].value}
     // enviar dados do form
-    postData('/model/adicionar.php', resultado)
-    .then(data => {
-        criaModal({idModal: "modal_error",textContent: data,btnAcao: false});
-        console.log(data); // JSON data parsed by `data.json()` call
-        $('div_container_modal').modal('toggle');
-    });
     fetch('/model/adicionar.php', {
         method: 'POST', 
         mode: 'no-cors', 
