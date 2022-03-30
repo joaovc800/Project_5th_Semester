@@ -1,5 +1,5 @@
 <?php
-include('../model/session.php');
+//include('../model/session.php');
 ?>
 <!doctype html>
 <html lang="pt-BR">
