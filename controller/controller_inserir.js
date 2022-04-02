@@ -120,19 +120,21 @@ const localizacao = document.getElementById('form-field-select-2'); // localizac
 fetch("/model/dropowns.php")
 .then( res => res.json())
 .then( (dados) => {
-    if (dados.ERR !== 'Success') {
+    if (dados.MSG === 'Success') {
         console.log(dados);
+        console.log(dados.MSG)
         dados.TIPO_ATIVO.map( (valor) =>  {
+            console.log(valor)
             let child = document.createElement("option");
-            child.value = valor.item;
-            child.innerText = valor.item;
+            child.value = valor.ID;
+            child.innerText = valor.ITEM;
             tipoAtivo.appendChild(child);
         }) 
         
         dados.LOCALIZACAO.map( (valor) =>  {
             let child = document.createElement("option");
-            child.value = valor.item;
-            child.innerText = valor.item;
+            child.value = valor.ID;
+            child.innerText = valor.ITEM;
             localizacao.appendChild(child);
         }) 
     } else {

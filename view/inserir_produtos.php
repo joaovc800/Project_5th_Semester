@@ -1,5 +1,5 @@
 <?php
-//include('../model/session.php');
+include('../model/session.php');
 ?>
 <!doctype html>
 <html lang="pt-BR">
@@ -80,7 +80,7 @@
                         <label for="fname">Tipo de Ativo:</label>
                         <select class="form-control col-sm-8 col-md-7" id="form-field-select-1">
                           <!-- no JS esta essa parte, esta unica option é para não mostrar o item primeiro -->
-                          <option></option> 
+                          <option disabled selected>Selecione o tipo de ativo</option> 
                         </select>
                       </div>
                     </div>
@@ -89,7 +89,7 @@
                         <label for="lname">Localização:</label><br>
                         <select class="form-control col-sm-8 col-md-7" id="form-field-select-2">
                           <!-- no JS esta essa parte, esta unica option é para não mostrar o item primeiro -->
-                          <option></option>
+                          <option disabled selected>Selecione a localização</option>
                         </select>
                       </div>
                     </div>

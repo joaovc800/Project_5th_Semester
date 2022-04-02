@@ -41,12 +41,68 @@ include('../model/session.php');
     <?php include("../includes/navbar.php"); ?>
     <div class="main-container">
       <?php include("../includes/sidebar.php"); ?>
-      <h1>HOME</h1>
+      <div class="page-content container container-plus"> 
+        <div class="page-header pb-2">
+          <h1 class="page-title text-primary-d2 text-150">
+            Dashboard
+            <small class="page-info text-secondary-d2 text-nowrap">
+              <i class="fa fa-angle-double-right text-80"></i>
+              Dados Totais &amp; Quantidades
+            </small>
+          </h1>
+          <div class="card-toolbar no-border dd-backdrop dd-backdrop-none-md">
+            <a href="#" class="btn btn-xs btn-light-secondary border-1 text-600 px-4 radius-round dropdown-toggle" role="button" data-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="false">
+              2022
+            </a>
+            <div class="dropdown-menu dropdown-menu-right dropdown-caret dropdown-animated dd-appear-center dd-slide-none-md mw-auto">
+              <!-- precisa do javascript depois para terminar o dropdown com os anos -->
+            </div>
+            <div class="card-toolbar align-self-center ml-2">
+              <a href="#" data-action="reload" class="card-toolbar-btn text-success-m2 text-100">
+                <i class="fas fa-sync-alt"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xl-8">
+            <div class="row" id="cards">
+              <!-- Criado com JS -->
+            </div>
+            <div class="col my-3">
+              <h2 class="page-title text-primary-d2 text-150">
+                <a href='/view/inserir_produtos.php' style="text-decoration:none;"> 
+                  <i class="fa fa-angle-double-right text-80"></i>
+                  Inserir Produtos
+                </a>
+              </h2>
+            </div>
+          </div> 
+          <!-- CHARTTTT -->
+          <div class="col-xl-4 mt-4 mt-xl-0">
+            <div class="card ccard h-100 overflow-hidden">
+              <div class="card-header border-0 bgc-white card-header-sm">
+                <h6 class="card-title text-dark-m3 pl-25 pt-15 text-110">
+                  Status do Estoque
+                  <br>
+                  <span class="text-85 text-dark-l2">
+                </span>
+                </h6>
+              </div>
+              <div class="card-body p-3 bgc-whit flex-grow-1" >
+                <canvas id="myChart"></canvas>
+              </div>
+            </div>
+          </div>
+        <!-- CHARRTTT -->
+        </div>
+      </div>
     </div>
   </div>
   <script src="../controller/controller_home.js"></script>
+  <script src="../controller/controller_dash.js"></script>
   <script src="../controller/controller_sidebar.js"></script>
-  <script src="../includes/graph.js"></script>
+  <!-- <script src="../includes/graph.js"></script> -->
   <script src="../includes/bootstrap.js"></script>
   <script src="../includes/ace.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

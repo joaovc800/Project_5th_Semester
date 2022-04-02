@@ -16,17 +16,17 @@ try {
         throw new Exception('Dado Vazio encontrado');// Lançar um erro com os dados caso não tenha sido digitado alguma info
     }
     // dados
-    $c_produto = mysqli_escape_string($conect,$json->c_produto);
+    $c_produto = mysqli_escape_string($conect,$json->c_produto); // CODIGO
     $t_ativo = mysqli_escape_string($conect,$json->t_ativo);
     $descricao = mysqli_escape_string($conect,$json->descricao);
     $n_fiscal = mysqli_escape_string($conect,$json->n_fiscal);
     $n_serial = mysqli_escape_string($conect,$json->n_serial);
     $localizacao = mysqli_escape_string($conect,$json->localizacao);
     $date = $dia;
-    $id_usuario = $_SESSION['DADOS_USER']['ID_USUARIO'];
-    //$id_usuario = 4; // para testes
+    //$id_usuario = $_SESSION['DADOS_USER']['ID_USUARIO'];
+    $id_usuario = 4; // para testes
     // criar a query
-    $query = "INSERT INTO inventario2 (CODIGO_PRODUTO, TIPO_ATIVO, DESCRICAO, NOTA_FISCAL, NUM_SERIAL, LOCALIZACAO, DATA, ID_USUARIO) VALUES ('{$c_produto}','{$t_ativo}','{$descricao}','{$n_fiscal}','{$n_serial}', '{$localizacao}', '{$date}', '{$id_usuario}')";
+    $query = "INSERT INTO inventario (CODIGO_PRODUTO, TIPO_ATIVO, DESCRICAO, NOTA_FISCAL, NUM_SERIAL, LOCALIZACAO, DATA, ID_USUARIO) VALUES ('{$c_produto}',{$t_ativo},'{$descricao}',{$n_fiscal},'{$n_serial}', {$localizacao}, '{$date}', {$id_usuario})";
     
     // roda a query e retorna se funcionou ou nao
     if($conect->query($query) === TRUE){

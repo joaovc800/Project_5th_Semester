@@ -5,8 +5,8 @@ include("functions.php");
 header("Content-type: application/json");
 $aRetorno = array();
 try {
-    $cQryMenu = "SELECT item FROM localizacao";
-    $cQryMenu2 = "SELECT item FROM ativos";
+    $cQryMenu = "SELECT ID, ITEM FROM localizacao";
+    $cQryMenu2 = "SELECT ID, ITEM FROM ativos";
 
     $fetchQueryMenu = mysqli_query($conect,$cQryMenu); // 1 query : dropdown
     $fetchQueryMenu2 = mysqli_query($conect,$cQryMenu2); // 2 query : tipo
