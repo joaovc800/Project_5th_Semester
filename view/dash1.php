@@ -2022,7 +2022,7 @@ include('../model/session.php')
                             <i class="fa fa-times text-70" aria-hidden="true"></i>
                             </button>
                         </div>
-                        <div class="modal-body mx-md-2 ace-scroll-lock ace-scroll ace-scroll-wrap" data-ace-scroll="{&quot;smooth&quot;: true, &quot;lock&quot;: true}" style="">
+                        <div class="modal-body mx-md-2 ace-scroll-lock ace-scroll ace-scroll-wrap" data-ace-scroll="{&quot;smooth&quot;: true, &quot;lock&quot;: true}" >
                             <div class="ace-scroll-inner" style="color: rgb(65, 70, 77);">
                             <form autocomplete="off">
                                 <div class="d-flex flex-column flex-md-row justify-content-md-between align-items-md-center">
