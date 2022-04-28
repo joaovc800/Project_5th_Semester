@@ -95,7 +95,6 @@ fetch("/model/graficos.php")
                     },
                     display: true,
                     position:'top'
-                    
                 }
             }
         }
