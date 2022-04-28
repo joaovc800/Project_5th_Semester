@@ -2,20 +2,19 @@
 session_start();
 include("connect.php");
 include("functions.php");
-header('Content-Type: application/json; charset=utf-8;Access-Control-Allow-Origin: *');
+header('Content-Type: application/json; charset=utf-8; Access-Control-Allow-Origin: *');
 try {
     $query = 'SELECT count(inventario.TIPO_ATIVO) as quantidade,
                     ativos.ITEM as ativo,
                     localizacao.ITEM as localizacao,
-                    acessos.ID_USUARIO as usuario
+                    acessos.ID_USUARIO as usuario,
+                    inventario.DATA as dia
                 FROM inventario, ativos, localizacao, acessos
                 WHERE inventario.ID_USUARIO = acessos.ID_USUARIO
                 AND inventario.TIPO_ATIVO = ativos.ID
                 AND inventario.LOCALIZACAO = localizacao.ID
-                GROUP BY ativos.ITEM';
-    // Caso a query contenha `localizacao.ITEM, acessos.ID_USUARIO` no group by
-    // Todos os items vão aparecer na lista, não seria por causa que a localizacao e id_usuario não sao baseados na session? ai pega todos?
-    
+                GROUP BY inventario.DATA';
+
     $fetchQuery = mysqli_query($conect, $query);
     $count = mysqli_num_rows($fetchQuery);
    

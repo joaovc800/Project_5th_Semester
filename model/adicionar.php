@@ -12,9 +12,21 @@ try {
     $dia = strftime('%Y-%m-%d', strtotime('today')); 
 
     // verificar campos vázios
-    if(  empty($json->c_produto) || empty($json->t_ativo) || empty($json->n_fiscal) || empty($json->n_serial) || empty($json->localizacao) || empty($json->descricao)){
-        throw new Exception('Dado Vazio encontrado');// Lançar um erro com os dados caso não tenha sido digitado alguma info
+    if(empty($json->c_produto)) {
+        throw new Exception('Codigo de Produto vazio');// Lançar um erro com os dados caso não tenha sido digitado alguma info
+    } else if ( empty($json->t_ativo) ) {
+        throw new Exception('Tipo de ativo vazio');
+    } else if ( empty($json->n_fiscal) ) {
+        throw new Exception('Nota fiscal vazia');
+    } else if ( empty($json->n_serial) ) {
+        throw new Exception('Numero serial vazio');
+    } else if ( empty($json->localizacao) ) {
+        throw new Exception('Localizacao vazia');
+    } else if ( empty($json->descricao) ) {
+        throw new Exception('Descricao vazia');
     }
+
+
     // dados
     $c_produto = mysqli_escape_string($conect,$json->c_produto); // CODIGO
     $t_ativo = mysqli_escape_string($conect,$json->t_ativo);
@@ -23,8 +35,8 @@ try {
     $n_serial = mysqli_escape_string($conect,$json->n_serial);
     $localizacao = mysqli_escape_string($conect,$json->localizacao);
     $date = $dia;
-    $id_usuario = $_SESSION['DADOS_USER']['ID_USUARIO'];
-    //$id_usuario = 4; // para testes
+    // $id_usuario = $_SESSION['DADOS_USER']['ID_USUARIO']; // Para posts normais
+    $id_usuario = mysqli_escape_string($conect,$json->id_usuario); // Apenas para post automatizados
     // criar a query
     $query = "INSERT INTO inventario (CODIGO_PRODUTO, TIPO_ATIVO, DESCRICAO, NOTA_FISCAL, NUM_SERIAL, LOCALIZACAO, DATA, ID_USUARIO) VALUES ('{$c_produto}',{$t_ativo},'{$descricao}',{$n_fiscal},'{$n_serial}', {$localizacao}, '{$date}', {$id_usuario})";
     

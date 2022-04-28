@@ -3,7 +3,6 @@ include('../model/session.php');
 ?>
 <!doctype html>
 <html lang="pt-BR">
-
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
@@ -16,8 +15,8 @@ include('../model/session.php');
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600&amp;display=swap"> 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.css">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600&display=swap">
-	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="../includes/css/ace.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../includes /css/ace.min.css">
     <link rel="stylesheet" type="text/css" href="../includes/css/ace-themes.min.css">
     <link rel="stylesheet" type="text/css" href="../includes/css/ace.css">
     <link rel="stylesheet" type="text/css" href="../includes/css/ace-themes.css"></link>
@@ -25,57 +24,34 @@ include('../model/session.php');
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
-    
+    <!-- nossos -->
+    <link rel="stylesheet" href="../includes/card.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         .navbar-brand span {
           font-family: 'Open Sans'
         }
+        label {
+          cursor: text;
+        }
     </style>
   </head>
-
 <body>
 	<div class="body-container">
-        <?php include("../includes/navbar.php"); ?>
-      	<div class="main-container">
-			  <?php include("../includes/sidebar.php"); ?>
-        <section id="tabela" style="position: absolute; right:20%; top:40%; padding:5%;">
-<table class="table-light table-striped table-hover table-bordered">
-  <thead>
-    <tr>
-      <th scope="col">Id</th>
-      <th scope="col">Nome</th>
-      <th scope="col">valor 3</th>
-      <th scope="col">Valor 4</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row"><?php ?></th>
-      <td><?php ?></td>
-      <td><?php ?></td>
-      <td><?php ?></td>
-    </tr>
-    <tr>
-      <th scope="row"><?php ?></th>
-      <td><?php ?></td>
-      <td><?php ?></td>
-      <td><?php ?></td>
-    </tr>
-    <tr>
-      <th scope="row"><?php ?></th>
-      <td><?php ?></td>
-      <td><?php ?></td>
-      <td><?php ?></td>
-    </tr>
-  </tbody>
-</table>
-</section>
-      	</div>
+    <?php include("../includes/navbar.php"); ?>
+    <div class="main-container">
+        <?php include("../includes/sidebar.php"); ?>
+        <div class="pt-5 container-fluid d-flex flex-column text-center justify-content-center">
+          <h1>Produtos por Data</h1>
+          <p class="text-85"></p>
+          <div class="card-body px-5 bgc-whit flex-grow-1" >
+              <canvas id="myChart"></canvas>
+          </div>
+        </div>
     </div>
-
-  <script src="../controller/controller_home.js"></script>
+  </div>
+  <script src="../controller/controller_graficos.js"></script>
   <script src="../controller/controller_sidebar.js"></script>
-  <!-- <script src="../includes/js/sidebar.js"></script> -->
   <script src="../includes/bootstrap.js"></script>
   <script src="../includes/ace.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
