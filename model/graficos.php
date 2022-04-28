@@ -4,20 +4,29 @@ include("connect.php");
 include("functions.php");
 header('Content-Type: application/json; charset=utf-8; Access-Control-Allow-Origin: *');
 try {
-    $query = 'SELECT count(inventario.TIPO_ATIVO) as quantidade,
+    // $query = 'SELECT count(inventario.TIPO_ATIVO) as quantidade,
+    //                 ativos.ITEM as ativo,
+    //                 localizacao.ITEM as localizacao,
+    //                 acessos.ID_USUARIO as usuario,
+    //                 inventario.DATA as dia
+    //             FROM inventario, ativos, localizacao, acessos
+    //             WHERE inventario.ID_USUARIO = acessos.ID_USUARIO
+    //             AND inventario.TIPO_ATIVO = ativos.ID
+    //             AND inventario.LOCALIZACAO = localizacao.ID
+    //             GROUP BY inventario.DATA';
+    $query = "SELECT count(inventario.TIPO_ATIVO) as quantidade,
                     ativos.ITEM as ativo,
-                    localizacao.ITEM as localizacao,
-                    acessos.ID_USUARIO as usuario,
                     inventario.DATA as dia
-                FROM inventario, ativos, localizacao, acessos
-                WHERE inventario.ID_USUARIO = acessos.ID_USUARIO
-                AND inventario.TIPO_ATIVO = ativos.ID
-                AND inventario.LOCALIZACAO = localizacao.ID
-                GROUP BY inventario.DATA';
+                FROM inventario, ativos
+                WHERE inventario.TIPO_ATIVO = ativos.ID
+                GROUP BY inventario.DATA, 
+					inventario.TIPO_ATIVO";
+                    
 
+    // data agrupa o tipo e quantidade total daquele tipo
     $fetchQuery = mysqli_query($conect, $query);
     $count = mysqli_num_rows($fetchQuery);
-   
+    
     if($count > 0){
         $i;
         while ($ret = mysqli_fetch_assoc($fetchQuery)) {
