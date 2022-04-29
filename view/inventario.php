@@ -33,48 +33,35 @@ include('../model/session.php');
     </style>
   </head>
 
-<body>
+<body style="font-size:20px;">
 	<div class="body-container">
         <?php include("../includes/navbar.php"); ?>
       	<div class="main-container">
 			  <?php include("../includes/sidebar.php"); ?>
-        <section id="tabela" style="position: absolute; right:20%; top:40%; padding:5%;">
-<table class="table-light table-striped table-hover table-bordered">
-  <thead>
-    <tr>
-      <th scope="col">Id</th>
-      <th scope="col">Nome</th>
-      <th scope="col">valor 3</th>
-      <th scope="col">Valor 4</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row"><?php ?></th>
-      <td><?php ?></td>
-      <td><?php ?></td>
-      <td><?php ?></td>
-    </tr>
-    <tr>
-      <th scope="row"><?php ?></th>
-      <td><?php ?></td>
-      <td><?php ?></td>
-      <td><?php ?></td>
-    </tr>
-    <tr>
-      <th scope="row"><?php ?></th>
-      <td><?php ?></td>
-      <td><?php ?></td>
-      <td><?php ?></td>
-    </tr>
-  </tbody>
-</table>
-</section>
+          <div class="py-5 container-fluid d-flex flex-column text-center align-items-center">
+            <section >
+              <table class="table-light table-striped table-hover table-bordered">
+                <thead style="background-color:#3Da8E6;">
+                  <tr class="text-light">
+                    <th class="px-5" scope="col">Codigo do produto</th>
+                    <th class="px-5" scope="col">Nota Fiscal</th>
+                    <th class="px-5" scope="col">Tipo Ativo</th>
+                    <th class="px-5" scope="col">N° Serial</th>
+                    <th class="px-5" scope="col">Localização</th>
+                  </tr>
+                </thead>
+                <tbody id="dados">
+                  
+                </tbody>
+              </table>
+            </section>
+          </div>
       	</div>
     </div>
 
   <script src="../controller/controller_home.js"></script>
   <script src="../controller/controller_sidebar.js"></script>
+  <script src="../controller/controller_inventario.js"></script>
   <!-- <script src="../includes/js/sidebar.js"></script> -->
   <script src="../includes/bootstrap.js"></script>
   <script src="../includes/ace.js"></script>
