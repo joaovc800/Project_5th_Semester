@@ -28,5 +28,5 @@ Informar o endereço IP ou URL da aplicação, conforme exemplo abaixo. É impor
 
 * Endereço da aplicação (*Se houver mais de uma máquina ou endereço, a linha acima deve ser replicada para cada um deles*):
 	+ https://project2022developer.herokuapp.com/ 
-	+ <li>Login: fra@f </li>
-	+ <li>Senha: fra </li>
+	*<br> Login: fra@f 
+	 <br> Senha: fra 
