@@ -27,5 +27,6 @@ Sistema de gerenciamento de Estoque e ativos.
 Informar o endereço IP ou URL da aplicação, conforme exemplo abaixo. É importante lembrar que a máquinas em *Cloud* devem estar "no ar" para que as funcionalidades da aplicação estejam disponíveis. Caso não estejam disponíveis os serviços ou a aplicação não puder ser executada, não háverá como atribuir uma nota.
 
 * Endereço da aplicação (*Se houver mais de uma máquina ou endereço, a linha acima deve ser replicada para cada um deles*):
-	+ [18.231.33.109](182.1654.25.01/) ou
-	+ 
+	+ https://project2022developer.herokuapp.com/ 
+	+ <li>Login: fra@f </li>
+	+ <li>Senha: fra </li>
