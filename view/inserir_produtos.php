@@ -47,10 +47,14 @@ include('../model/session.php');
               <div class="card-header">
                 <h3 class="card-title text-125 text-primary-d2">
                   <i class="far fa-edit text-dark-l3 mr-1"></i>
-                    Adicionar Produtos
+                  Adicionar Produtos
                 </h3>
               </div>
               <div class="container card-body px-3">
+                <form>
+                  <input type="file" id="myFile" name="filename">
+                  <input type="submit">
+                </form>
                 <form>
                   <div class="form-row">
                     <div class="form-group col-md-6">

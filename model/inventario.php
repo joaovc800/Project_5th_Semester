@@ -5,14 +5,16 @@ include("functions.php");
 header('Content-Type: application/json; charset=utf-8;Access-Control-Allow-Origin: *');
 try {
     $query = 'SELECT 	inventario.CODIGO_PRODUTO as codigo,
-                inventario.NOTA_FISCAL as nota,
-                ativos.ITEM as ativo,
-                inventario.NUM_SERIAL as serial,
-                localizacao.ITEM as localizacao
-            FROM inventario, ativos, localizacao, acessos
-            WHERE	inventario.TIPO_ATIVO = ativos.ID
-            AND inventario.LOCALIZACAO = localizacao.ID
-            GROUP BY inventario.CODIGO_PRODUTO';
+            inventario.NOTA_FISCAL as nota,
+            ativos.ITEM as ativo,
+            inventario.NUM_SERIAL as serial,
+            localizacao.ITEM as localizacao,
+            inventario.DESCRICAO as descricao,
+            inventario.DATA as `data`
+        FROM inventario, ativos, localizacao, acessos
+        WHERE	inventario.TIPO_ATIVO = ativos.ID
+        AND inventario.LOCALIZACAO = localizacao.ID
+        GROUP BY inventario.CODIGO_PRODUTO';
 
     // Caso a query contenha `localizacao.ITEM, acessos.ID_USUARIO` no group by
     // Todos os items vão aparecer na lista, não seria por causa que a localizacao e id_usuario não sao baseados na session? ai pega todos?
