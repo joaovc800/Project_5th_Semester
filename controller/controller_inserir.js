@@ -49,9 +49,9 @@ function criaModal(param){
         toastInner.setAttribute('id',`${param.idModal}`);
 
         modal = `
-                    <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
                     <div class="toast-header">
-                    <img src="..." class="rounded mr-2" alt="...">
+                    <img src="../includes/images/icons/logo.png" class="rounded mr-2" alt="logo wit">
                     <strong class="mr-auto">Mensagem</strong>
                     <small>0 minutos atrás</small>
                     <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
