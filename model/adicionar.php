@@ -35,8 +35,16 @@ try {
     $n_serial = mysqli_escape_string($conect,$json->n_serial);
     $localizacao = mysqli_escape_string($conect,$json->localizacao);
     $date = $dia;
-    // $id_usuario = $_SESSION['DADOS_USER']['ID_USUARIO']; // Para posts normais
-    $id_usuario = mysqli_escape_string($conect,$json->id_usuario); // Apenas para post automatizados
+
+    // Por o ID conter + de uma forma de verificar, checamos todas ou senão retornamos para um número fixo
+    if ( !empty($_SESSION['DADOS_USER']['ID_USUARIO']) ) {
+        $id_usuario = $_SESSION['DADOS_USER']['ID_USUARIO'];
+    } else if ( empty($json->id_usuario) ) {
+        $id_usuario = 55; // o ID vira o id extra para outras chamadas (de varios sendo adicionados por exemplo, arquivos JSON)
+    } else {
+        $id_usuario = mysqli_escape_string($conect,$json->id_usuario); // Apenas para post automatizados
+    }
+
     // criar a query
     $query = "INSERT INTO inventario (CODIGO_PRODUTO, TIPO_ATIVO, DESCRICAO, NOTA_FISCAL, NUM_SERIAL, LOCALIZACAO, DATA, ID_USUARIO) VALUES ('{$c_produto}',{$t_ativo},'{$descricao}',{$n_fiscal},'{$n_serial}', {$localizacao}, '{$date}', {$id_usuario})";
     

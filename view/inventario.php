@@ -39,13 +39,14 @@ include('../model/session.php');
     <?php include("../includes/navbar.php"); ?>
     <div class="main-container">
     <?php include("../includes/sidebar.php"); ?>
-      <div class="py-5 container-fluid d-flex flex-column text-center align-items-center">
-        <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      <div id="main_container" class="py-5 container-fluid d-flex flex-column text-center align-items-center">
+        <h3>Insira o codigo do produto</h3>
+        <form class="d-flex form">
+          <input class="form-control me-2 " name="buscar" type="search" placeholder="codigo" aria-label="Search">
           <button class="btn btn-outline-primary" type="submit">Buscar</button>
         </form>
         <section class="mt-5">
-          <table class="table-light table-hover table-bordered">
+          <table id="dados_root" class="table-light table-hover table-bordered">
             <thead style="background-color:#3Da8E6;">
               <tr class="text-light">
                 <th class="px-5" scope="col">Codigo do produto</th>

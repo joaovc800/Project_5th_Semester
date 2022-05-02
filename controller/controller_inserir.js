@@ -29,7 +29,7 @@ function criaModal(param){
                                 <div class="modal-header">
                                     <h5 class="modal-title">Atenção</h5>
                                     <button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Close">
-                                        <i class="fas fa-times"></i>
+                                        <i class="solid fas fa-times"></i>
                                     </button>
                                 </div>
                                 <div class="modal-body">
@@ -95,7 +95,6 @@ function criaElemento(param){
             }
         }
     }
-    console.log(element)
     return element
 }
 
@@ -121,10 +120,7 @@ fetch("/model/dropowns.php")
 .then( res => res.json())
 .then( (dados) => {
     if (dados.MSG === 'Success') {
-        console.log(dados);
-        console.log(dados.MSG)
         dados.TIPO_ATIVO.map( (valor) =>  {
-            console.log(valor)
             let child = document.createElement("option");
             child.value = valor.ID;
             child.innerText = valor.ITEM;
@@ -146,14 +142,15 @@ fetch("/model/dropowns.php")
 //////////////////////////////////////////
 // Pegar dados do form
 
-document.querySelector('form').addEventListener('submit',  async (e) => {
+document.getElementById('form_manual').addEventListener('submit',  async (e) => {
     e.preventDefault(); // previnir redirect
     // pegar dados do form
     const dados = Array(Object.fromEntries( new FormData(e.target).entries()));
     let dropdown = document.getElementById('form-field-select-1');
     let dropdown2 = document.getElementById('form-field-select-2');
     let resultado = {...dados[0], t_ativo:dropdown.options[dropdown.selectedIndex].value, localizacao:dropdown2.options[dropdown2.selectedIndex].value}
-    console.log(resultado)
+
+
     // enviar dados do form
     fetch('/model/adicionar.php', {
         method: 'POST', 
@@ -169,9 +166,7 @@ document.querySelector('form').addEventListener('submit',  async (e) => {
     })
     .then( res => res.json())
     .then( dados => {
-        console.log(dados.ERRO)
         if (dados.ERRO != true) {
-            console.log(dados);
             criaModal({tipo:'toaster',idModal: "modal_sucesso", textContent: dados.MSG});;
             $(".toast").toast("show");
         } else {
@@ -184,3 +179,61 @@ document.querySelector('form').addEventListener('submit',  async (e) => {
     })
 });
 
+// pegar vários dados pelo arquivo
+document.getElementById('form_json').addEventListener('submit',  async (e) => {
+    e.preventDefault(); // previnir redirect
+    // pegar dados do form
+    const dados = Array(Object.fromEntries( new FormData(e.target).entries()));
+    let resultado = {...dados[0]};
+    // ENVIAR O ARQUIVO PARA FAZER O PROCESSAMENTO E JÁ ENVIAR PELO FETCH
+    parseAndPostJson(resultado.arquivo);
+});
+
+document.getElementById("custom_file").addEventListener("change", function() {
+    var file = this.files;
+    document.getElementById("custom_file_label").innerHTML = file[0].name;
+});
+
+async function parseAndPostJson(file) {
+    /**
+     * ler e enviar os dados
+     */
+    
+    const fileReader = new FileReader();
+    fileReader.onload = event => { 
+        const json = JSON.parse(event.target.result);
+
+        for(const key of Object.keys(json)) {
+            // enviar dados para o php
+            fetch('/model/adicionar.php', {
+                method: 'POST', 
+                mode: 'no-cors', 
+                cache: 'no-cache', 
+                credentials: 'same-origin', 
+                headers: {
+                  'Content-Type': 'application/json'
+                },
+                redirect: 'follow', 
+                referrerPolicy: 'no-referrer', 
+                body: JSON.stringify(json[key])
+            })
+            .then( res => res.json())
+            .then( dados => {
+                if (dados.ERRO != true) {
+                    criaModal({tipo:'toaster',idModal: "modal_sucesso", textContent: dados.MSG});;
+                    $(".toast").toast("show");
+                } else {
+                    criaModal({tipo:'modal',idModal: "modal_error", textContent: dados.MSG});;
+                    $("#modal_error").modal("show");
+                }
+            })
+            .catch( err => {
+                console.log(err)
+            })
+        }
+    };
+    
+    fileReader.onerror = error => error;
+    fileReader.readAsText(file);
+}
+        

@@ -47,15 +47,11 @@ include('../model/session.php');
               <div class="card-header">
                 <h3 class="card-title text-125 text-primary-d2">
                   <i class="far fa-edit text-dark-l3 mr-1"></i>
-                  Adicionar Produtos
+                    Adicionar Produtos
                 </h3>
               </div>
               <div class="container card-body px-3">
-                <form>
-                  <input type="file" id="myFile" name="filename">
-                  <input type="submit">
-                </form>
-                <form>
+                <form id="form_manual">
                   <div class="form-row">
                     <div class="form-group col-md-6">
                       <div class="col-sm">
@@ -106,11 +102,37 @@ include('../model/session.php');
                         <div class="mt-4">
                           <button id="submit" class="btn btn-info btn-bold px-4"  type="submit">
                             <i class="fa fa-check mr-1"></i>
-                            Submit
+                            Enviar
                           </button>
                           <button id="reset" class="btn btn-outline-lightgrey btn-bgc-white btn-bold ml-2 px-4" type="reset">
                             <i class="fa fa-undo mr-1"></i>
-                            Reset
+                            Resetar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+                <form id="form_json">
+                  <div class="form-row">
+                      <div class="form-group col-md-3">
+                        <div class="col-sm">
+                          <h4>Enviar vários (JSON): </h4>
+                        </div>
+                      </div>
+                      <div class="form-group col-md-9">
+                        <div class="col-sm custom-file col-md-6 mx-auto">
+                          <!-- este form tem checagem JSON caso javascript for criado -->
+                            <input id="custom_file" type="file" class="custom-file-input" name="arquivo" id="validatedCustomFile" required>
+                            <label id="custom_file_label"class="custom-file-label" for="validatedCustomFile">Selecionar arquivo JSON</label>
+                            <div class="invalid-feedback">checar se é json</div>
+                          </div>
+                        </div>
+                      <div class="form-group col-md-3">
+                        <div class="col-sm">
+                          <button id="submit" class="btn btn-dark btn-bold px-4"  type="submit">
+                            <i class="fa fa-check mr-1"></i>
+                            Enviar
                           </button>
                         </div>
                       </div>
