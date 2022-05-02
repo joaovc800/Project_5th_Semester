@@ -18,18 +18,18 @@ fetch("/model/dashboard.php")
             labels.push(valor.ativo);
             da.push(valor.quantidade);
             var cards = `
-                <div class="col-3">
+            <div class="col-3">
                 <div class="card acard mt-2 mt-lg-3" style="border:1px solid rgb(${redColor},${greenColor},${blueColor}); box-shadow: inset 0 0.5rem 0.25rem rgb(${redColor},${greenColor},${blueColor},100%);">
-                <div class="container card-body px-3">
-                    <div class="form-row">
-                    <div class="form-group">
-                        <div class="col-sm">
-                        <label for="lname">${valor.ativo}:</label><br>
-                        <h5>${valor.quantidade}</h5>
+                    <div class="container card-body px-3">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <div class="col-sm">
+                                <label for="lname">${valor.ativo}:</label><br>
+                                <h5>${valor.quantidade}</h5>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    </div>
-                </div>
                 </div>
             </div>
             `;

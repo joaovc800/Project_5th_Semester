@@ -40,11 +40,13 @@ include('../model/session.php');
     <div class="main-container">
     <?php include("../includes/sidebar.php"); ?>
       <div id="main_container" class="py-5 container-fluid d-flex flex-column text-center align-items-center">
-        <h3>Insira o codigo do produto</h3>
+        <h3>Insira o codigo do produto que busca</h3>
         <form class="d-flex form">
           <input class="form-control me-2 " name="buscar" type="search" placeholder="codigo" aria-label="Search">
           <button class="btn btn-outline-primary" type="submit">Buscar</button>
         </form>
+        <p>... ou gere um arquivo com todo o inventário</p>
+        <a id="gerar_json" class="btn btn-outline-secondary" disabled aria-disabled="true">Gerar JSON</a>
         <section class="mt-5">
           <table id="dados_root" class="table-light table-hover table-bordered">
             <thead style="background-color:#3Da8E6;">

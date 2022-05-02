@@ -220,15 +220,15 @@ async function parseAndPostJson(file) {
             .then( res => res.json())
             .then( dados => {
                 if (dados.ERRO != true) {
-                    criaModal({tipo:'toaster',idModal: "modal_sucesso", textContent: dados.MSG});;
+                    criaModal({tipo:'toaster',idModal: "modal_sucesso", textContent: dados.MSG});
                     $(".toast").toast("show");
                 } else {
-                    criaModal({tipo:'modal',idModal: "modal_error", textContent: dados.MSG});;
+                    criaModal({tipo:'modal',idModal: "modal_error", textContent: dados.MSG});
                     $("#modal_error").modal("show");
                 }
             })
             .catch( err => {
-                console.log(err)
+                console.log(err);
             })
         }
     };

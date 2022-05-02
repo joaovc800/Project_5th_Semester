@@ -1,4 +1,3 @@
-
 $(document).ready(function() {
     fetch("/model/inventario.php")
     .then( res => res.json())
@@ -32,6 +31,7 @@ $(document).ready(function() {
         document.getElementById("dados_root").appendChild(newDados);
         
         let root = document.getElementById("dados");
+        download(document.getElementById('gerar_json'),dados.DADOS);
         dados.DADOS.map( (val,index) => {
     
             let div = criaElemento({ element: "tr", id: `dados_row_${index}`});
@@ -46,8 +46,9 @@ $(document).ready(function() {
             `;
             
             document.getElementById(`dados_row_${index}`).innerHTML = tabelaSearch;
+
+            // Preparar o arquivo para download
             document.getElementById(`dados_row_${index}`).addEventListener('click', () => { 
-             
                 let nodeModal = document.getElementById("modal_descricao");
                 if(nodeModal){
                     nodeModal.remove();
@@ -68,8 +69,6 @@ $(document).ready(function() {
                         </div>
                     </div>
                 `;
-                
-            
                 const div = document.createElement('div');
                 div.classList.add('modal');
                 setAttributes(div, { tabindex:"-1", id: 'modal_descricao' });
@@ -80,6 +79,16 @@ $(document).ready(function() {
         })
     }
     
+    function download(element,values) {
+        // const file = new File(values,"inventario.json",{
+        //     type: "application/json"
+        // })
+        var dataStr = "data:application/json;charset=utf-8," + encodeURIComponent(JSON.stringify(values));
+        element.setAttribute("href",dataStr);
+        element.setAttribute("download", "inventario.json");
+        element.disabled = false;
+    }
+
     function criaElemento(param){
     
         element = document.createElement(param.element);
@@ -109,6 +118,16 @@ $(document).ready(function() {
         }
         return element
     }
+
+    // Gerar JSON
+    // document.getElementById('gerar_json').addEventListener('click', (e) => {
+    //     function download(element) {
+    //         element.href = url;
+    //         element.download = url.split('/').pop();
+    //         element.click();
+    //     }
+    //     document.getElementById('gerar_json')
+    // })
 
     // FORM HANDLEEEEEEEEEEEEEEEEEEEEEERRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
     document.querySelector('form').addEventListener('submit',  async (e) => {
@@ -180,6 +199,7 @@ $(document).ready(function() {
                         document.body.prepend(div);
                         document.getElementById(`modal_descricao`).innerHTML = modalDescricao;
                         $("#modal_descricao").modal("show");
+                        document.getElementById('gerar_json').disabled = false;
                     })
                 }  
             })
@@ -209,5 +229,5 @@ $(document).ready(function() {
         })
         .catch( err => console.log(err))
     });
-
+    
 }) // linha de finalizacao jquery
