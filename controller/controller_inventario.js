@@ -61,6 +61,7 @@ $(document).ready(function() {
                                 <h5 class="modal-title">Descrição do ${val.ativo} adicionado ${val.data}</h5>
                             </div>
                             <div class="modal-body">
+                                <h5>CODIGO : ${val.codigo}</h5>
                                 <p>${val.descricao}</p>
                             </div>
                             <div class="modal-footer">
@@ -129,7 +130,7 @@ $(document).ready(function() {
     //     document.getElementById('gerar_json')
     // })
 
-    // FORM HANDLEEEEEEEEEEEEEEEEEEEEEERRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
+    // BUSCAR HANDLEEEEEEEEEEEEEEEEEEEEEERRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
     document.querySelector('form').addEventListener('submit',  async (e) => {
         e.preventDefault(); // previnir redirect
         // pegar dados do form
@@ -155,8 +156,12 @@ $(document).ready(function() {
             document.getElementById("dados_root").appendChild(newDados);
             
             let root = document.getElementById("dados");
+            const arrayJson = []; // array que mantem os dados para o Json download
             dados.DADOS.map( (val,index) => {
                 if (val.codigo === resultado.buscar) {
+                    // Cria o objecto
+                    arrayJson.push({codigo:val.codigo,nota:val.nota,ativo:val.ativo,serial:val.serial,localizacao:val.localizacao,descricao:val.descricao,data:val.data});
+                    
                     // criar elemento
                     let div = criaElemento({ element: "tr", id: `dados_row_${index}`});
                     root.appendChild(div);
@@ -184,6 +189,7 @@ $(document).ready(function() {
                                         <h5 class="modal-title">Descrição do ${val.ativo} adicionado ${val.data}</h5>
                                     </div>
                                     <div class="modal-body">
+                                        <h5>CODIGO : ${val.codigo}</h5>
                                         <p>${val.descricao}</p>
                                     </div>
                                     <div class="modal-footer">
@@ -202,10 +208,12 @@ $(document).ready(function() {
                         document.getElementById('gerar_json').disabled = false;
                     })
                 }  
+
             })
+            
             // Checar se há dados ou não
+            
             const targetDiv = document.getElementById('dados');
-        
             if (targetDiv.childNodes.length === 0) {
                 // avisar que nada foi encontrado
                 let errorAlert = document.getElementById("error_alert");
@@ -215,16 +223,18 @@ $(document).ready(function() {
                 
                 let div = criaElemento({ element: "div", id: `error_alert`});
                 document.getElementById("main_container").prepend(div);
-            
+                
                 let error = `
-                    <div class="alert alert-primary" role="alert">
-                        O produto não existe em nosso estoque, resetando.
-                    </div>
+                <div class="alert alert-primary" role="alert">
+                O produto não existe em nosso estoque, resetando.
+                </div>
                 `;
                 
                 document.getElementById(`error_alert`).innerHTML = error;
                 // após 5000 millisegundos fazer reload dos dados
                 setTimeout(function() { createTable(dados); }, 3000);
+            } else {
+                download(document.getElementById('gerar_json'),arrayJson);
             }
         })
         .catch( err => console.log(err))
