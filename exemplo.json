@@ -1,7 +1,7 @@
 {
     "row1" : {
         "c_produto": "2312312312132",
-        "n_fiscal":"31231",
+        "n_fiscal":31,
         "t_ativo": 4, 
         "n_serial":"31412414",
         "descricao": "Um notebook",
@@ -9,7 +9,7 @@
     },
     "row2" : {
         "c_produto": "1111111111",
-        "n_fiscal":"312312133123",
+        "n_fiscal":31,
         "t_ativo": 14,
         "n_serial":"22222222",
         "descricao": "Um celular",
@@ -17,7 +17,7 @@
     },
     "row3" : {
         "c_produto": "31313213",
-        "n_fiscal":"36767",
+        "n_fiscal":36,
         "t_ativo": 4,
         "n_serial":"5464564564",
         "descricao": "Um notebook",
@@ -25,7 +25,7 @@
     },
     "row4" : {
         "c_produto": "888675358",
-        "n_fiscal":"75685685",
+        "n_fiscal":75,
         "t_ativo": 24,
         "n_serial":"765477",
         "descricao": "Um mouse",
