@@ -65,7 +65,7 @@ include('../model/session.php');
             Adicionar Novos Produtos ao Estoque: <a href="/view/inserir_produtos.php">PRODUTOS</a>
           </p>
           <p class="pr-md-5 mr-md-5" style="text-align: justify;">
-          Analisar, Exibir e Rastrear Estoque: <a href="/view/inserir_produtos.php">INVENTÁRIO</a>
+          Analisar, Exibir e Rastrear Estoque: <a href="/view/inventario.php">INVENTÁRIO</a>
           </p>
           <p class="pr-md-5 mr-md-5" style="text-align: justify;">
             Vizualização de Atualização do Estoque: <a href="/view/grafico_data.php">VIZUALIZAÇÃO</a>
