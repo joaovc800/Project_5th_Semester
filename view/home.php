@@ -24,6 +24,7 @@ include('../model/session.php');
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../includes/css/home.css"></link>
     <!-- nossos -->
     <link rel="stylesheet" href="../includes/card.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -41,7 +42,36 @@ include('../model/session.php');
     <?php include("../includes/navbar.php"); ?>
     <div class="main-container">
       <?php include("../includes/sidebar.php"); ?>
-      <h1>HOME</h1>
+      <div id="main_container" class="py-5 container-fluid d-flex flex-column text-center justify-content-between align-items-center">
+        <h1>HOME</h1>
+        <div class="block1 p-5 m-4 m-md-4">
+          <h4 class="font-weight-bold">
+            Bem-vindo ao nosso sistema de gerência!
+          </h4>
+          <h4 class="font-weight-bold">
+            Proporcionamos a melhor Experiência de gerência de 
+          </h4>
+          <h4 class="font-weight-bold">
+            estoque baseada na segurança e satisfação de nossos funcionarios.
+          </h4> 
+        </div>
+        <div class="block2 p-5 font-weight-bold">
+          <h4 class="font-weight-bold"> Para iniciar:</h4>
+          <h4 class="font-weight-bold">Selecione a pagina referênte abaixo!</h4>
+          <p class="pr-md-5 pt-md-5 mr-md-5" style="text-align: justify;">
+            Vizualização Estado Geral do Estoque: <a href="/view/dashboard.php">DASHBOARD</a>
+          </p>
+          <p class="pr-md-5 mr-md-5" style="text-align: justify;">
+            Adicionar Novos Produtos ao Estoque: <a href="/view/inserir_produtos.php">PRODUTOS</a>
+          </p>
+          <p class="pr-md-5 mr-md-5" style="text-align: justify;">
+          Analisar, Exibir e Rastrear Estoque: <a href="/view/inserir_produtos.php">INVENTÁRIO</a>
+          </p>
+          <p class="pr-md-5 mr-md-5" style="text-align: justify;">
+            Vizualização de Atualização do Estoque: <a href="/view/grafico_data.php">VIZUALIZAÇÃO</a>
+          </p>
+        </div>
+      </div>
     </div>
   </div>
   <script src="../controller/controller_home.js"></script>
