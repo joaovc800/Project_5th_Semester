@@ -7,7 +7,7 @@ Sistema de gerenciamento de ativos
 <li>JavaScript</li>
 <li>PHP</li>
 <li>Ace</li>
-
+<li>MySql</li>
 
 
 ## Integrantes
