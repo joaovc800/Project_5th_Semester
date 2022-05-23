@@ -30,3 +30,7 @@ Informar o endereço IP ou URL da aplicação, conforme exemplo abaixo. É impor
 	+ https://project2022developer.herokuapp.com/ 
 	*<br> Login: fra@f 
 	 <br> Senha: fra 
+
+## Informações Adicionais
+- Para utilizar o "enviar JSON" na area de adicionar produtos, utilizar o "exemplo.json" como base.
+Obs: "t_ativo" só aceita valores inteiros entre 0-6 relacionados ao tipo (0 - Notebook, 1 - Celular, 2 - Mouse, 3 - Teclado, 4 - Fone, 5 - Monitor, 6 - All-in-one); "localizacao" também só aceita valores inteiros entre 0-4 (0 - São Paulo, 1 - Cuiaba, 2 - Fortaleza, 3 - Rio De Janeiro, 4 - Paraná).
